@@ -5,6 +5,7 @@ A test suite and accompanying `gradle` build to validate compliance of CTS insta
 ## Running the test suite interactively ##
 
 Requires:  [gradle](http://gradle.org)
+
 Run
 
     gradle jettyRunWar
