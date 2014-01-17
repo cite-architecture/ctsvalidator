@@ -1,0 +1,132 @@
+
+/* 
+   A very slight adaptation (cutting down on blocked backgrounds and outlines)
+   of chs_styles.css, a set of styles designed to harmonize with the CHS's 
+   main site, at chs.harvard.edu
+
+Basic Colors:
+
+main text color: black
+light color: #FFF
+medium color: #DDD
+dark color #555
+
+*/
+
+.NB {
+    padding: 1em;
+    margin : 1.5em;
+    background-color : #CCCCCC;
+    border: 1px solid gray;
+}
+
+
+
+/* Utility Styles */
+/*  Use this class value on a container with text directing users
+    to a CSS-compliant browser:  it will only display if their
+    browser does NOT cope with CSS.
+    (Suggested by WASP:  http://www.webstandards.org/)
+*/
+.checkcss	{	display:	none;
+		}
+
+
+
+/* Basic Page Structure */
+html		{ background: #DDD; }
+		
+body		{ 
+			background: #fff; 
+		  color: black;
+		  width: 80%;
+		  padding: 2em;
+		  margin: 1em;
+		  border: 1px solid #555;
+		font: medium "Lucida Grande" "Arial Unicode MS", sans-serif;
+
+		}
+
+/* Generic elements */
+
+
+
+a		{
+			color: navy;
+			text-decoration: none;
+		}
+	
+a:hover { text-decoration: underline; }
+
+h2 {
+    padding-bottom: 0em;
+    margin-bottom: 0em;
+}
+table	{ width: 100%; 
+		  padding-top: 0em;
+		  padding-bottom: 1em;
+		}
+
+td {
+    	font: small "Lucida Grande" "Arial Unicode MS", sans-serif;
+}
+/* The following IDs are expected to skin a standard CHS site:
+	head, menu and footer.
+   In addition, chs_logo_noText.png can be set to a literal URL or
+   replaced during an ant build to define a logo to include in the header.
+ */
+#header {
+		font: 150% "Lucida Grande" "Arial Unicode MS", sans-serif;
+		background: transparent url(chs_logo_noText.png) no-repeat 0px 0px;
+		padding-left: 3.5em;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		margin-bottom: 0.5em;
+		height: 2em;
+		}
+		
+#header p { font-size: small ; }
+		
+.menu	{		
+		font: 80% "Lucida Grande" "Arial Unicode MS", sans-serif;
+		}
+		
+#footer	{
+		font: 80% "Lucida Grande" "Arial Unicode MS", serif;
+                border-top: 1px solid gray;
+		padding: 1em;
+                text-align: center;
+                color : gray;
+		}		
+		
+#footer a { 
+			color: navy; 
+			text-decoration: none;
+			}
+		
+#footer a:hover { text-decoration: underline; }
+
+
+.debug {
+    float : right;
+    background-color : #AAAAAA;
+    border: 1px;
+}
+		
+.invisible {    display:        none;  }
+.block {        display:        block; }
+.inline {       display:        inline; }	
+
+.optional { color : #AAAAAA;}
+
+#queryparams { border-top : 1px solid gray;
+}
+
+table { width : 100%; }
+.rowlabel { width : 25%; }
+
+
+
+.fail { color : red; }
+.ok { color : green;}
+.caution{ color : yellow}

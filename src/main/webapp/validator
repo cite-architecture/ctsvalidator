@@ -1,0 +1,211 @@
+/*
+  validator: a groovlet to run the standard CTS 3 validation tests against
+  a given CTS installation.
+
+  copyright (c) 2008 Neel Smith
+
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU General Public License
+   as published by the Free Software Foundation; either version 3
+   of the License, or (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+
+   Neel Smith, neel_smith@users.sourceforge.net
+
+  Usage:
+  The URL of the CTS installation to test should be given in a parameter
+  named "url".  The file with the definition of tests and the files
+  with valid answers are in the "testsuites/" directory of this groovlet.
+
+   Output:
+   An HTML page with one tabular display for each request. (This relies on the fact that the
+   tests in tests.xml are grouped by CTS request.)  Totals are also displayed for the whole suite
+   of tests.
+*/
+
+
+/*
+import groovy.xml.DOMBuilder
+import javax.xml.transform.dom.DOMSource
+import javax.xml.parsers.DocumentBuilder
+import javax.xml.parsers.DocumentBuilderFactory
+import org.w3c.dom.DOMImplementation
+import org.w3c.dom.Document
+import org.w3c.dom.Node
+*/
+
+
+// Use IBM's Normalizer class to canonicalize UTF-8 text data
+import com.ibm.icu.text.Normalizer
+// Use XML Unit for XML comparisons
+import org.custommonkey.xmlunit.*
+
+def versionInfo ="version of June, 2009, using test suite <strong>Beta 2</strong>"
+
+// Two prerequisites for testing:  
+// 1) a valid set of test files (the expected data in comparisons)
+// 2) a live CTS installation (the actual data in comparisons)
+
+// 1: test file with cts3 suite of tests
+boolean testFileOK = false
+def testsDir = context.getRealPath("/testsuites")
+def testFile = new File(testsDir + "/tests.xml")
+if (testFile.exists()) {
+    testFileOK = true
+}
+
+
+// 2: requested CTS installaion:
+boolean connectionOK = false
+HttpURLConnection conn
+def url = request.getParameter("url")
+def urlObj
+def urlErrMsg = ""
+try {
+  urlObj = new URL(url)
+  conn = (HttpURLConnection) urlObj.openConnection()
+  conn.connect()
+
+  if (conn.getResponseCode() == 200) {
+    connectionOK = true
+  } else {
+    urlErrMsg = "response status ${conn.getResponseCode()}"
+  }
+} catch (Exception e) { 
+ // leave boolean flag == false
+   urlErrMsg = e.toString()
+}
+
+
+if (!testFileOK) {
+   println   "<error>ERROR:  Could not open testsuites/tests.xml</error>"
+
+} else if (!urlObj) {
+    println   "<error>ERROR: Could not create URL from parameter ${url}</error>" 
+
+} else if (!connectionOK) {
+    println   "<error>ERROR:  Could not get connectoin for url ${url} == ${urlErrMsg}</error>"
+
+
+
+} else { // All prerequistes passed:  now read and apply tests
+
+def testXml = new XmlSlurper().parse(testFile) // if your testFile is no good, you're in trouble
+def currentReq = ""
+def totalTests = 0
+def totalSuccess = 0
+def currentTests = 0
+def currentSuccess = 0
+
+println   """
+<html><head>
+<title>Results of testing CTS</title>
+
+<link type="text/css" rel="stylesheet" href="validator.css" title="CHS style"/>
+
+</head>
+<body>
+
+<p class="menu">CTS validator (${versionInfo}):  <a href="home">Home</a></p>
+<div id="header">CTS Validator: results</div>
+<p>Site tested: <code>${url}</code>
+</p>
+
+<p>Links on test IDs are to the URL used in the test.
+</p>
+"""
+
+
+testXml.test.each { t ->
+if (currentReq == "") {
+currentReq = t.request
+println   """
+<h2>Tests for ${currentReq}</h2><table>
+<tr>
+<th>Test</th><th>Summary of test</th><th>Results</th></tr>
+"""      
+
+
+} else if (currentReq != t.request) {
+      println   "<tr><td/><th>Total for <code>${currentReq}</code></th><td>${currentSuccess}/${currentTests}</td></tr>"
+      println   "</table>"
+
+      currentReq = t.request
+      currentTests = 0
+      currentSuccess = 0
+
+      println   """<h2>Tests for ${currentReq}</h2>
+<table><tr><th>Test</th><th>Summary of test</th><th>Results</th><th>Details about failures</th></tr>
+"""      
+
+    } 
+    currentTests++
+    totalTests++
+
+
+    def req = url + "?request=${t.request}&urn=${t.urn}&${t.otherparams}"
+    println    """
+<tr><td><a href="${req}">${t.@id}</a></td><td>${t.description}
+
+(cf. <a href="testsuites/${t.@id}.xml">expected result</a>)
+
+</td>
+
+<td>
+"""
+
+// Read actual and expected data as Strings, use IBM's
+// Normalizer to normalize UTF-8 characters, then use
+// groovy's DOMBuilder to parse the normalized Strings
+def actual  = new URL(req).getText("UTF-8")
+actual = Normalizer.normalize(actual, Normalizer.NFC) 
+def expected = new File(testsDir + "/${t.@id}.xml").getText("UTF-8")
+expected = Normalizer.normalize(expected, Normalizer.NFC)
+
+// Explicitly set both of these before XML-based comparison:
+XMLUnit.setIgnoreWhitespace(true)
+XMLUnit.setNormalizeWhitespace(true)
+XMLUnit.setIgnoreComments(true)
+
+def xmlDiff = new Diff(expected, actual )
+if (xmlDiff.identical()) {
+    println   "<td class='ok'>success</td>"
+    println "<td></td>"
+    currentSuccess++
+    totalSuccess++
+
+} else {
+    println   "<td class='fail'>failed</td><td>"
+    def details = new DetailedDiff(xmlDiff)
+    def allDiffs = details.getAllDifferences()
+    println   "<ul>"
+    allDiffs.each {
+    		  println   "<li>${it}</li>"
+    }
+    println   "</ul>"
+    println   "</td>"
+}
+println   "</tr>"
+} // textXml.test.each
+
+println   """<tr><td/><th>Total for <code>${currentReq}</code></th><td>${currentSuccess}/${currentTests}</td></tr>
+
+</table>
+<p>
+Total for all requests: successes/total tests = ${totalSuccess}/${totalTests}
+</p>
+</body>
+</html>
+"""
+
+} // all preconditions met
+
+

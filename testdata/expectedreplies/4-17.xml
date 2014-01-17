@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cts:GetPrevNextUrn   xmlns:cts="http://chs.harvard.edu/xmlns/cts3" 
+	   xmlns="http://chs.harvard.edu/xmlns/cts3">
+
+<request>
+<requestName>GetPrevNextUrn</requestName>
+<requestUrn>urn:cts:latinLit:stoa0115.stoa002:1.1.14-2.1.3</requestUrn>
+</request>
+
+<reply>
+
+<prevnext>
+
+<prev>
+<urn>urn:cts:latinLit:stoa0115.stoa002.stoa01:1.1.13</urn>
+</prev>
+
+<next>
+<urn>urn:cts:latinLit:stoa0115.stoa002.stoa01:2.1.4</urn>
+</next>
+</prevnext>
+</reply>
+</cts:GetPrevNextUrn>

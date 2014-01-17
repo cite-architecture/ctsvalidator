@@ -1,0 +1,40 @@
+
+// Landing page for validator:  a simple form to supply a URL
+// of a CTS installation to test.
+
+
+def versionInfo ="version of Dec. 27, 2008, using test suite <strong>Beta 1</strong>"
+
+//def testsuiteUrl = "http://chs75.harvard.edu/projects/diginc/techpub/cts-testsuite"
+def validator = "validator"
+
+
+
+println """
+<html><head>
+<title>CTS validator</title>
+<link type="text/css" rel="stylesheet" href="validator.css" title="CHS style"/>
+</head>
+<body>
+<p class="menu">CTS validator (${versionInfo})</p>
+<div id="header">
+CTS validator</div>
+<p>This service tests a CTS service
+against a standard CTS test suite /*described
+<a href="${testsuiteUrl}">here</a>*/.
+</p>
+
+<h2>Test required requests</h2>
+<p>
+Validate CTS at the following
+URL:
+</p>
+
+<form action="${validator}">
+<input name="url" value="http://localhost:8080/ctslet/CTS" style="width:60%">
+</form>
+
+</body>
+</html>
+"""
+
