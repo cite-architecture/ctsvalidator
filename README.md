@@ -17,7 +17,10 @@ This version of `ctsvalidator` uses the Relax NG schemas from version 5.0.rc.1 o
 
 Requires:  [gradle](http://gradle.org)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b627218f71d20176cbda9dcb30005bcbccb2bd6e
 Run
 
     gradle  jettyRunWar
@@ -26,7 +29,11 @@ Point your browser at <http://localhost:8080/ctsvalidator> to suplly the URL of 
 
 ## Running the test suite automatically ##
 
+<<<<<<< HEAD
 TBA.  (Not yet implemented.)
 Run
 
     gradle -Ptesturl=BASEURL jettyRunWar
+=======
+TBA
+>>>>>>> b627218f71d20176cbda9dcb30005bcbccb2bd6e
