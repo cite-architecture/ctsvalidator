@@ -3,9 +3,15 @@
 // of a CTS installation to test.
 
 
-def versionInfo ="version of Dec. 27, 2008, using test suite <strong>Beta 1</strong>"
+//def versionInfo ="version of Dec. 27, 2008, using test suite <strong>Beta 1</strong>"
 
-//def testsuiteUrl = "http://chs75.harvard.edu/projects/diginc/techpub/cts-testsuite"
+
+
+
+
+def versionInfo ="tests version 5.0.rc.1 of the CTS specification"
+
+
 def validator = "validator"
 
 
@@ -20,8 +26,7 @@ println """
 <div id="header">
 CTS validator</div>
 <p>This service tests a CTS service
-against a standard CTS test suite /*described
-<a href="${testsuiteUrl}">here</a>*/.
+against a standard CTS test suite.
 </p>
 
 <h2>Test required requests</h2>
@@ -30,8 +35,9 @@ Validate CTS at the following
 URL:
 </p>
 
-<form action="${validator}">
-<input name="url" value="http://localhost:8080/ctslet/CTS" style="width:60%">
+<form action="validator">
+<input name="url" value="http://localhost:8888/sparqlcts/api" style="width:60%"/>
+<input type="submit" value="Run validator"/>
 </form>
 
 </body>

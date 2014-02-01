@@ -77,8 +77,8 @@ td {
  */
 #header {
 		font: 150% "Lucida Grande" "Arial Unicode MS", sans-serif;
-		background: transparent url(chs_logo_noText.png) no-repeat 0px 0px;
-		padding-left: 3.5em;
+		/*background: transparent url(chs_logo_noText.png) no-repeat 0px 0px;*/
+		padding-left: 0em;
 		padding-top: 1em;
 		padding-bottom: 1em;
 		margin-bottom: 0.5em;
