@@ -22,12 +22,12 @@
     <groupname
       xml:lang="eng">Erasmus</groupname>
     <work
-      urn="urn:cts:latinLit:stoa0015.stoa002"
+      urn="urn:cts:latinLit:stoa0115.stoa002"
       xml:lang="lat">
       <title
         xml:lang="lat">Colloquia Familiaria</title>
       <edition
-        urn="urn:cts:latinLit:stoa0015.stoa001.stoa01">
+        urn="urn:cts:latinLit:stoa0115.stoa001.stoa01">
         <label
           xml:lang="eng">Scaife</label>
         <online
