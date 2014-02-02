@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cts:GetPassagePlus
+	xmlns="http://chs.harvard.edu/xmlns/cts3"
+	xmlns:cts="http://chs.harvard.edu/xmlns/cts3"
+	>
+	<request>
+		<requestName>GetPassagePlus</requestName>
+		<requestUrn>urn:cts:latinLit:stoa0115.stoa002:1</requestUrn>
+	</request>
+	<cts:reply xmlns:tei="http://www.tei-c.org/ns/1.0">
+		<passage>
+			<tei:TEI>
+				<tei:text>
+					<tei:body>
+						<tei:div
+							n="1"
+							type="colloquium">
+							<tei:div
+								n="1"
+								type="topic">
+								<p
+									n="1"
+									xmlns="http://www.tei-c.org/ns/1.0">Non temere docet quidam, ut
+									salutemus libenter. Comis enim et blanda salutatio saepe
+									conciliat amicitiam, inimicitiam diluit: certe mutuam
+									benevolentiam alit augetque. Quidam usque adeo Demeae sunt,
+									ingenioque agresti, ut vix salutati resalutent.</p>
+								<p
+									n="2"
+									xmlns="http://www.tei-c.org/ns/1.0">Nonnullis hoc vitii
+									conciliavit educatio verius, quam natura.</p>
+								<p
+									n="3"
+									xmlns="http://www.tei-c.org/ns/1.0">Urbanitatis est, salutare
+									obvios, aut eos, qui nos adeunt, aut quos adimus ipsi
+									colloquendi gratia. Item operis aliquid agentes, coenantes,
+									oscitantes, singultientes, sternutantes, tussientes. In ructu
+									crepituve ventris salutare, hominis est plus satis urbani.</p>
+								<p
+									n="4"
+									xmlns="http://www.tei-c.org/ns/1.0">Sed incivilius etiam, eum
+									salutare, qui reddit urinam, aut alvum exonerat.</p>
+								<p
+									n="5"
+									xmlns="http://www.tei-c.org/ns/1.0">Salve pater, salve
+									matercula, salve mi frater, salve praeceptor observande, salve
+									multum, mi patrue, salve dulcissime nepos.</p>
+								<p
+									n="6"
+									xmlns="http://www.tei-c.org/ns/1.0">Urbanum est, addere
+									cognationis aut affinitatis titulum, nisi quum habent aliquid
+									odii: tum enim praestat abuti minus quidem propriis, sed
+									plausibilioribus: veluti, quum novercam salutamus matrem;
+									privignum, filium; vitricum, patrem; sororis maritum, fratrem;
+									fratris uxorem, sororem. Idem in aetatis aut officiorum titulis
+									faciendum. Gratius enim fuerit, si senem patrem, aut virum
+									eximium salutes, quam aetatis cognomine; etiamsi olim honoris
+									causa dicebatur, <foreign
+										xml:lang="grc">ὦ γέρον.</foreign> Salve praefecte, salve
+									tribune. Non autem, salve caligarie, aut calcearie. Salve
+									adolescens, salve iuvenis. Senes ignotos adolescentes filiorum
+									cognomento salutant, adolescentes vicissim illos patres aut
+									dominos.</p>
+								<p
+									n="7"
+									xmlns="http://www.tei-c.org/ns/1.0">
+									<emph>Blandior salutatio inter amantes</emph>
+								</p>
+								<p
+									n="8"
+									xmlns="http://www.tei-c.org/ns/1.0">Salve <list>
+										<item>mea Corneliola</item>
+										<item>mea vita</item>
+										<item>mea lux</item>
+										<item>meum delicium</item>
+										<item>meum suavium</item>
+										<item>mel meum</item>
+										<item>mea voluptas unica</item>
+										<item>meum corculum</item>
+										<item>mea spes</item>
+										<item>meum solatium</item>
+										<item>meum decus</item>
+									</list>
+								</p>
+								<p
+									n="9"
+									xmlns="http://www.tei-c.org/ns/1.0">
+									<emph>Honoris gratia, aut secus</emph>
+								</p>
+								<p
+									n="10"
+									xmlns="http://www.tei-c.org/ns/1.0">Salve here. Ohe, salve tu
+									quoque, bone vir. Salve vir ornatissime, clarissime. Salve etiam
+									atque etiam, literarum decus. Salve plurimum, amicorum optime.
+									Salve mi Maecenas. Salve patrone singularis. Salve vir
+									spectatissime. Salve unicum huius aetatis ornamentum. Salve
+									Germaniae delicium. Salvete, quotquot estis, una salute omnes.
+									Salvete pariter omnes. Salvete belli homunculi. Salve congerro
+									lepidissime. Salve vini pernicies.<emph>Resp.</emph>. Salve et
+									tu gurges, helluoque placentarum. Salve multum, virtutis omnis
+										antistes.<emph>Resp.</emph>. Salve tantundem totius
+									probitatis exemplar. Salve anicula annos nata
+										quindecim.<emph>Resp.</emph>. Salve puella annorum
+									octoginta. Bene sit tibi cum tuo calvitio.<emph>Resp.</emph>.
+									Bene tibi cum lacero naso. Ut salutaris, ita resalutaberis. Si
+									male dixeris peius audies. Salve iterum atque
+									iterum.<emph>Resp.</emph>. Et tu salve perpetuum. Salve plus
+										millies.<emph>Resp.</emph>. Equidem malim salvere semel.
+									Salve, quantum vis.<emph>Resp.</emph>. Et tu quantum mereris.
+									Salvere te iubeo. Quid si nolim? Equidem aegrotare malim, quam
+									tua salute salvere.</p>
+								<p
+									n="11"
+									xmlns="http://www.tei-c.org/ns/1.0">Salva sit tua <list>
+										<item>Sanctitas</item>
+										<item>Amplitudo</item>
+										<item>Celsitudo</item>
+										<item>Maiestas</item>
+										<item>Beatitudo</item>
+										<item>Sublimitas</item>
+									</list>
+								</p>
+								<p
+									n="12"
+									xmlns="http://www.tei-c.org/ns/1.0">magis vulgo recepta sunt,
+									quam probata doctis.</p>
+								<p
+									n="13"
+									xmlns="http://www.tei-c.org/ns/1.0">Sapidus Erasmo suo salutem
+									dicit.</p>
+								<p
+									n="14"
+									xmlns="http://www.tei-c.org/ns/1.0">Sapidus Beatum suum plurima
+									salute impertit.</p>
+								<p
+									n="15"
+									xmlns="http://www.tei-c.org/ns/1.0">
+									<emph>Alia forma</emph>
+								</p>
+								<p
+									n="16"
+									xmlns="http://www.tei-c.org/ns/1.0">Salvus sis, Crito. Bene tibi
+									sit, vir optime. <emph>Resp.</emph> Et tibi melius. Pax tibi,
+									frater, Christiana salutatio est, a Iudaeis profecta, neque
+									tamen repudianda. Similis est, Bona vita. Ave praeceptor.
+										<emph>Resp.</emph> Equidem malim habere, quam avere. <foreign
+										xml:lang="grc">Χαῖρε</foreign>. <emph>Resp.</emph> Memento
+									te Basileae esse, non Athenis. <emph>Resp.</emph> Cur tu igitur
+									audes Romane loqui, quum Romae non sis?</p>
+							</tei:div>
+						</tei:div>
+					</tei:body>
+				</tei:text>
+			</tei:TEI>
+		</passage>
+		<prevnext>
+			<prev>
+				<urn>urn:cts:latinLit:stoa0115.stoa002.stoa01:preface</urn>
+			</prev>
+			<next>
+				<urn>urn:cts:latinLit:stoa0115.stoa002.stoa01:2</urn>
+			</next>
+		</prevnext>
+	</cts:reply>
+</cts:GetPassagePlus>

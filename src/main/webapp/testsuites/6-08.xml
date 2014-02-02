@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cts:GetPassagePlus xmlns:cts="http://chs.harvard.edu/xmlns/cts3" xmlns="http://chs.harvard.edu/xmlns/cts3" xmlns:tei="http://www.tei-c.org/ns/1.0">
+	     <request>
+	     <requestName>GetPassagePlus</requestName>
+	     <requestUrn>urn:cts:greekLit:tlg0013.tlg011:1</requestUrn>
+	     </request>
+	     <cts:reply>
+	     <passage><tei:TEI><tei:text><tei:body><l n="1" xmlns="http://www.tei-c.org/ns/1.0">Παλλάδ' Ἀθηναίην ἐρυσίπτολιν ἄρχομ' ἀείδειν</l></tei:body></tei:text></tei:TEI></passage><prevnext><prev/><next><urn>urn:cts:greekLit:tlg0013.tlg011.chs01:2</urn></next></prevnext></cts:reply></cts:GetPassagePlus>

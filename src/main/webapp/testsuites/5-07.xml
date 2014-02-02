@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cts:GetPassage
+	xmlns:cts="http://chs.harvard.edu/xmlns/cts3"
+	xmlns="http://chs.harvard.edu/xmlns/cts3">
+	
+	<request>
+		<requestName>GetPassage</requestName>
+		<requestUrn>urn:cts:latinLit:stoa0115.stoa002:1.1.1</requestUrn>
+		
+	</request>
+	<cts:reply xmlns:tei="http://www.tei-c.org/ns/1.0" ><tei:TEI><tei:text><tei:body><tei:div type='colloquium' n='1'><tei:div type = 'topic' n = '1'><p n="1" xmlns="http://www.tei-c.org/ns/1.0">Non temere docet quidam, ut salutemus libenter. Comis enim et blanda salutatio saepe conciliat amicitiam, inimicitiam diluit: certe mutuam benevolentiam alit augetque. Quidam usque adeo Demeae sunt, ingenioque agresti, ut vix salutati resalutent.</p></tei:div></tei:div></tei:body></tei:text></tei:TEI></cts:reply></cts:GetPassage>
+

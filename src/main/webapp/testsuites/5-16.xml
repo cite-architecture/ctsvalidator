@@ -1,0 +1,13 @@
+<GetPassage>
+    <request>
+        <requestName>GetPassage</requestName>
+        <requestUrn>urn:cts:greekLit:tlg0013.tlg011:3</requestUrn>
+        <requestContext>0</requestContext>
+    </request>
+    <reply>
+        <CTSError>
+            <message>Invalid context parameter: 0</message>
+            <code>4</code>
+        </CTSError>
+    </reply>
+</GetPassage>
