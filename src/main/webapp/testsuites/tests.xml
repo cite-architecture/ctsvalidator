@@ -1,4 +1,5 @@
 <testsuite>
+    
      <test
           id="1-01">
           <description>Request for service's capabilities: textgroup and work identifiers match.</description>
@@ -10,7 +11,7 @@
 
 
      <!-- GetValidReff -->
-
+     <!--
      <test
           id="3-01">
           <description>Request with invalid URN syntax: error code matches</description>
@@ -20,7 +21,6 @@
      </test>
 
 
-<!--
      <test
           id="3-02">
           <description>Request missing URN parameter: error code matches.</description>
@@ -28,7 +28,7 @@
           <urn/>
           <otherparams/>
      </test>
-
+  
      <test
           id="3-03">
           <description>Request on invalid work reference: error code matches.</description>
@@ -59,10 +59,10 @@
           <urn>urn:cts:latinLit:stoa0115.stoa002:preface.43-1.INVALID</urn>
           <otherparams/>
      </test>
-
+-->
      <test
           id="3-07">
-          <description>Request on valid notional worurn:cts:greekLit:tlg0013.tlg011k: reply element matches.</description>
+          <description>Request on valid notional work: reply element matches.</description>
           <request>GetValidReff</request>
           <urn>urn:cts:greekLit:tlg0013.tlg011</urn>
           <otherparams/>
@@ -75,7 +75,7 @@
           <urn>urn:cts:greekLit:tlg0013.tlg011.chs01</urn>
           <otherparams/>
      </test>
-
+<!--
      <test
           id="3-09">
           <description>Request for containing passage reference: reply element matches.</description>
