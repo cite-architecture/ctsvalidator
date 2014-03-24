@@ -1,0 +1,4 @@
+
+ext {
+    ctsVersion = "5.0.rc.1"
+}

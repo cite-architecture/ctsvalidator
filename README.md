@@ -1,8 +1,8 @@
 #ctsvalidator#
 
-A test suite and accompanying `gradle` build to validate compliance of CTS instances with the CTS API.
+A test suite and accompanying `gradle` build to validate compliance of CTS instances with the CTS API.  It currently uses schemas for CTS 5.0.rc.1.
 
-The test suite consists of an archive of texts, and a CTS TextInventory document.  The archive of texts is provided in three formats that are equivalent under the OHCO2 model of texts:
+The test suite includes an archive of texts in three different formats for loading into a CTS instance, together with a CTS TextInventory identifying the texgts.  The three formats are equivalent under the OHCO2 model of texts:
 
 - an archival text format.  Examples include namespaced XML, non-namespaced XML, and markown.
 - a tabular representation
@@ -17,10 +17,6 @@ This version of `ctsvalidator` uses the Relax NG schemas from version 5.0.rc.1 o
 
 Requires:  [gradle](http://gradle.org)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b627218f71d20176cbda9dcb30005bcbccb2bd6e
 Run
 
     gradle  jettyRunWar
@@ -29,11 +25,8 @@ Point your browser at <http://localhost:8080/ctsvalidator> to suplly the URL of 
 
 ## Running the test suite automatically ##
 
-<<<<<<< HEAD
 TBA.  (Not yet implemented.)
 Run
 
     gradle -Ptesturl=BASEURL jettyRunWar
-=======
-TBA
->>>>>>> b627218f71d20176cbda9dcb30005bcbccb2bd6e
+ 
