@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://katoptron.holycross.edu/schemas/teip5/teip5core.rng" type="xml"?>
+<TEI xmlns='http://www.tei-c.org/ns/1.0'>
+    <teiHeader xml:lang='eng'>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang='eng'>To Athena</title>
+                <respStmt>
+                    <name>Hugh G. Evelyn-White</name>
+                    <resp>translator</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <availability>
+                    <p>TEI-compliant edition licensed under the
+                        Creative Commons Attribution-Share Alike 3.0 Unported License.
+                        For more information, see:
+                        http://creativecommons.org/licenses/by-sa/3.0/ 
+                    </p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Hugh G. Evelyn-White' 1914 translation,
+                digitized by Project Gutenberg, available from
+                http://www.gutenberg.org/etext/348
+                </p>
+                <p>Canonical citation is by poetic line, including ranges of lines.</p>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident='grc'>accented ancient Greek in beta code</language>
+                <language ident='grc-c'>accented ancient Greek in Unicode-C Greek characters</language>
+                <language ident='eng'>English</language>
+                <language ident='lat'>Latin</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body xml:lang="eng">
+            <head>To Athena</head>
+            <l n="1-4"> Of Pallas Athene, guardian of the city, I begin to
+            sing.  Dread is she, and with Ares she loves deeds of war, the
+            sack of cities and the shouting and the battle.  It is she who
+            saves the people as they go out to war and come back.</l>
+            <l n="5">Hail, goddess, and give us good fortune with happiness!</l>
+        </body>
+    </text>
+    </TEI>
+
+
+

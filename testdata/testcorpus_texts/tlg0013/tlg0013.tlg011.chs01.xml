@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://katoptron.holycross.edu/schemas/teip5/teip5core.rng" type="xml"?>
+
+<TEI  
+  xmlns="http://www.tei-c.org/ns/1.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0">
+  <teiHeader xml:lang='eng'>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang='lat'>In Minervam</title>
+        <author xml:lang='lat'>Hymni Homerici</author>
+      </titleStmt>
+      <publicationStmt>
+        <availability>
+          <p>Born-digital TEI-compliant edition licensed under the
+			Creative Commons Attribution-Share Alike 3.0 Unported License.
+			For more information, see:
+                    	http://creativecommons.org/licenses/by-sa/3.0/ 
+			</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Readings based on version of text in the TLG.</p>
+        <p>Canonical citation is by poetic line.</p>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident='grc'>accented ancient Greek in beta code</language>
+        <language ident='grc-c'>accented ancient Greek in Unicode-C Greek characters</language>
+        <language ident='eng'>English</language>
+        <language ident='lat'>Latin</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:lang='grc-c'>
+    <body>
+      <head>Εἰς Ἀθηνᾶν</head>
+      <l n='1'>Παλλάδ' Ἀθηναίην ἐρυσίπτολιν ἄρχομ' ἀείδειν</l>
+      <l n='2'>δεινήν, ᾗ σὺν Ἄρηϊ μέλει πολεμήϊα ἔργα</l>
+      <l n='3'>περθόμεναί τε πόληες ἀϋτή τε πτόλεμοί τε,</l>
+      <l n='4'>καί τ' ἐρρύσατο λαὸν ἰόντα τε νισόμενόν τε.</l>
+      <l n='5'>Χαῖρε θεά, δὸς δ' ἄμμι τύχην εὐδαιμονίην τε.</l>
+    </body>
+  </text>
+</TEI>
