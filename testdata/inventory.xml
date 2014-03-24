@@ -202,14 +202,15 @@
     </work>
   </textgroup>
   <textgroup
-    urn="urn:cts:greekLit:tlg0013.tlg0012">
+    urn="urn:cts:greekLit:tlg0012">
     <groupname
-      xml:lang="eng">Homer</groupname>
+      xml:lang="eng">Homeric poetry</groupname>
     <work
       urn="urn:cts:greekLit:tlg0012.tlg001"
       xml:lang="grc">
       <title
         xml:lang="eng">Iliad</title>
+      <!--
       <edition
         urn="urn:cts:greekLit:tlg0012.tlg001.oct">
         <label
@@ -233,6 +234,7 @@
           </citationMapping>
         </online>
       </edition>
+    
       <edition
         urn="urn:cts:greekLit:tlg0012.tlg001.octnons">
         <label
@@ -252,7 +254,7 @@
             </citation>
           </citationMapping>
         </online>
-      </edition>
+      </edition> -->
     </work>
   </textgroup>
 </TextInventory>

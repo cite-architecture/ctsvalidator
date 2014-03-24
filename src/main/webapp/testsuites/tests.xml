@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="file:testsuite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <testsuite>
+     
+     <!--
      <test
           id="1-01">
           <description>Request for service's capabilities: textgroup and work identifiers match.</description>
@@ -8,7 +10,7 @@
           <urn/>
           <otherparams/>
      </test>
-
+-->
 
 
      <!-- GetValidReff -->
