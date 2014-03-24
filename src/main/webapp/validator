@@ -1,8 +1,8 @@
 /*
-  validator: a groovlet to run the standard CTS 3 validation tests against
+  validator: a groovlet to run CTS validation tests against
   a given CTS installation.
 
-  copyright (c) 2008 Neel Smith
+  copyright (c) 2008-2014 Neel Smith
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public License
@@ -18,7 +18,8 @@
    along with this program; if not, write to the Free Software
    Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
-   Neel Smith, neel_smith@users.sourceforge.net
+   Neel Smith, nsmith@holycross.edu
+
 
   Usage:
   The URL of the CTS installation to test should be given in a parameter
@@ -32,23 +33,17 @@
 */
 
 
-/*
-import groovy.xml.DOMBuilder
-import javax.xml.transform.dom.DOMSource
-import javax.xml.parsers.DocumentBuilder
-import javax.xml.parsers.DocumentBuilderFactory
-import org.w3c.dom.DOMImplementation
-import org.w3c.dom.Document
-import org.w3c.dom.Node
-*/
-
 
 // Use IBM's Normalizer class to canonicalize UTF-8 text data
 import com.ibm.icu.text.Normalizer
 // Use XML Unit for XML comparisons
 import org.custommonkey.xmlunit.*
 
-def versionInfo ="version of June, 2009, using test suite <strong>Beta 2</strong>"
+
+import edu.harvard.chs.f1k.GreekNode
+
+def versionInfo ="version designed for CTS specification 5.0.rc.1"
+
 
 // Two prerequisites for testing:  
 // 1) a valid set of test files (the expected data in comparisons)
@@ -80,84 +75,133 @@ try {
     urlErrMsg = "response status ${conn.getResponseCode()}"
   }
 } catch (Exception e) { 
- // leave boolean flag == false
-   urlErrMsg = e.toString()
+  // leave boolean flag == false
+  urlErrMsg = e.toString()
 }
 
 
 if (!testFileOK) {
-   println   "<error>ERROR:  Could not open testsuites/tests.xml</error>"
+  println   "<error>ERROR:  Could not open testsuites/tests.xml</error>"
 
 } else if (!urlObj) {
-    println   "<error>ERROR: Could not create URL from parameter ${url}</error>" 
+  println   "<error>ERROR: Could not create URL from parameter ${url}</error>" 
 
 } else if (!connectionOK) {
-    println   "<error>ERROR:  Could not get connectoin for url ${url} == ${urlErrMsg}</error>"
+  println   "<error>ERROR:  Could not get connection for url ${url} == ${urlErrMsg}</error>"
 
 
 
 } else { // All prerequistes passed:  now read and apply tests
 
-def testXml = new XmlSlurper().parse(testFile) // if your testFile is no good, you're in trouble
-def currentReq = ""
-def totalTests = 0
-def totalSuccess = 0
-def currentTests = 0
-def currentSuccess = 0
+  // organize tests by request:
+  def testData = [:]
+  def testXml = new XmlSlurper().parse(testFile) // if your testFile is no good, you're in trouble
+  testXml.test.each { t ->
+    String reqName = t.request
+    def record = [t.@id, t.urn, t.otherparams, t.description]
 
-println   """
-<html><head>
-<title>Results of testing CTS</title>
+    def reqList
+    if (testData[reqName]) {
+      reqList = testData[reqName]
+    } else {
+      reqList = []
+    }
+    reqList.add(record)
+    testData[reqName] = reqList
+  }
 
-<link type="text/css" rel="stylesheet" href="validator.css" title="CHS style"/>
+  def totalTests = 0
+  def totalSuccess = 0
 
-</head>
-<body>
+  html.html {
+    head {
+      title("Results of testing CTS")
+      link(text: "text/css", rel: "stylesheet", href: "validator.css", title: "CHS style")
+    }
+    body {
 
-<p class="menu">CTS validator (${versionInfo}):  <a href="home">Home</a></p>
-<div id="header">CTS Validator: results</div>
-<p>Site tested: <code>${url}</code>
-</p>
+      p (class: "menu") {
+	mkp.yield "CTS validator (${versionInfo}):  "
+	a(href: "home", "Home")
+      }
+      div(id: "header", "CTS Validator: results")
+      p {
+	mkp.yield "Site tested: "
+	code ("${url}")
+      }
+      p("Links on test IDs are to the URL used in the test.")
 
-<p>Links on test IDs are to the URL used in the test.
-</p>
-"""
-
-
-testXml.test.each { t ->
-if (currentReq == "") {
-currentReq = t.request
-println   """
-<h2>Tests for ${currentReq}</h2><table>
-<tr>
-<th>Test</th><th>Summary of test</th><th>Results</th></tr>
-"""      
-
-
-} else if (currentReq != t.request) {
-      println   "<tr><td/><th>Total for <code>${currentReq}</code></th><td>${currentSuccess}/${currentTests}</td></tr>"
-      println   "</table>"
-
-      currentReq = t.request
-      currentTests = 0
-      currentSuccess = 0
-
-      println   """<h2>Tests for ${currentReq}</h2>
-<table><tr><th>Test</th><th>Summary of test</th><th>Results</th><th>Details about failures</th></tr>
-"""      
-
-    } 
-    currentTests++
-    totalTests++
+      testData.keySet().each { requestName ->
+	h2("${requestName}")
 
 
-    def req = url + "?request=${t.request}&urn=${t.urn}&${t.otherparams}"
-    println    """
+	def currentTests = 0
+	def currentSuccess = 0
+
+	def testList = testData[requestName]
+
+
+
+	table {
+	  tr {
+	    th("Test")
+	    th("Summary of test")
+	    th("Results")
+	  }
+	  testList.each { test ->
+	    String id = test[0]
+	    String urn = test[1]
+	    String params = test[2]
+	    String description = test[3]
+
+
+	    currentTests++;
+	    totalTests++;
+
+	    def req = url + "?request=${requestName}&urn=${urn}&${params}"
+
+	    tr {
+	      td {
+		a(href: "${req}","${id}")
+	      }
+
+	    }
+	  }
+
+	  tr {
+	    td("")
+	    th {
+	      mkp.yield "Total for "
+	      code: "${requestName}"
+	    }
+	    td( "${currentSuccess}/${currentTests}")    
+	    
+	    }
+	}
+      }
+    }
+  }
+}
+
+
+      /*
+
+	    
+
+	      td ("$test.)
+
 <tr><td><a href="${req}">${t.@id}</a></td><td>${t.description}
 
 (cf. <a href="testsuites/${t.@id}.xml">expected result</a>)
 
-</td>
+
+
+
+    }
+  }
+}
+
+/*
 
 <td>
 """
@@ -165,8 +209,21 @@ println   """
 // Read actual and expected data as Strings, use IBM's
 // Normalizer to normalize UTF-8 characters, then use
 // groovy's DOMBuilder to parse the normalized Strings
+
+
+
 def actual  = new URL(req).getText("UTF-8")
 actual = Normalizer.normalize(actual, Normalizer.NFC) 
+
+groovy.xml.Namespace ctsns = new groovy.xml.Namespace("http://chs.harvard.edu/xmlns/cts")
+
+
+def root1 = new  XmlParser().parseText(actual)
+groovy.util.Node actualReplyNode  = root1[ctsns.reply][0]
+GreekNode gn = new GreekNode("<test>One element</test>\n")
+println "<td>ROOT 1: " + actualReplyNode.getClass() + "</td>"
+
+
 def expected = new File(testsDir + "/${t.@id}.xml").getText("UTF-8")
 expected = Normalizer.normalize(expected, Normalizer.NFC)
 
@@ -177,22 +234,24 @@ XMLUnit.setIgnoreComments(true)
 
 def xmlDiff = new Diff(expected, actual )
 if (xmlDiff.identical()) {
-    println   "<td class='ok'>success</td>"
-    println "<td></td>"
+  //    println   "<td class='ok'>success</td>"
+  //    println "<td></td>"
     currentSuccess++
     totalSuccess++
 
 } else {
-    println   "<td class='fail'>failed</td><td>"
+  //println   "<td class='fail'>failed</td><td>"
     def details = new DetailedDiff(xmlDiff)
     def allDiffs = details.getAllDifferences()
-    println   "<ul>"
+    //println   "<ul>"
     allDiffs.each {
-    		  println   "<li>${it}</li>"
+      //	  println   "<li>${it}</li>"
     }
-    println   "</ul>"
-    println   "</td>"
+    //println   "</ul>"
+    //println   "</td>"
 }
+
+
 println   "</tr>"
 } // textXml.test.each
 
@@ -206,6 +265,10 @@ Total for all requests: successes/total tests = ${totalSuccess}/${totalTests}
 </html>
 """
 
-} // all preconditions met
 
+
+
+
+} // all preconditions met
+  */
 
