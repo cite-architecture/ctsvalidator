@@ -15,7 +15,6 @@
 <urn:cts:latinLit:stoa0115.stoa002.stoa01> cts:xmlns <http://www.tei-c.org/ns/1.0> .
 <urn:cts:demo:demodocs.mixedpoem.local01> cts:xmlns <http://www.tei-c.org/ns/1.0> .
 <urn:cts:greekLit:tlg0013.tlg011.chs01> cts:xmlns <http://www.tei-c.org/ns/1.0> .
-<urn:cts:greekLit:tlg0012.tlg001.oct> cts:xmlns <http://www.tei-c.org/ns/1.0> .
 <urn:cts:latinLit:stoa0115.stoa002.stoa01> cts:belongsTo <urn:cts:latinLit:stoa0115.stoa002> .
 <urn:cts:latinLit:stoa0115.stoa002> cts:possesses <urn:cts:latinLit:stoa0115.stoa002.stoa01> .
 <urn:cts:latinLit:stoa0115.stoa002.stoa01> dcterms:title "Scaife" .
@@ -91,30 +90,95 @@
 
 <urn:cts:greekLit:tlg0013> rdf:label "Homeric Hymns" .
 
-<urn:cts:greekLit:tlg0012.tlg001.oct> cts:belongsTo <urn:cts:greekLit:tlg0012.tlg001> .
-<urn:cts:greekLit:tlg0012.tlg001> cts:possesses <urn:cts:greekLit:tlg0012.tlg001.oct> .
-<urn:cts:greekLit:tlg0012.tlg001.oct> dcterms:title "Allen OCT" .
+<urn:cts:greekLit:tlg0013.tlg011.chs02> cts:belongsTo <urn:cts:greekLit:tlg0013.tlg011> .
+<urn:cts:greekLit:tlg0013.tlg011> cts:possesses <urn:cts:greekLit:tlg0013.tlg011.chs02> .
+<urn:cts:greekLit:tlg0013.tlg011.chs02> dcterms:title "Evelyn-White" .
 
-<urn:cts:greekLit:tlg0012.tlg001.oct> rdf:type cts:Edition .
+<urn:cts:greekLit:tlg0013.tlg011.chs02> rdf:type cts:Translation .
 
-<urn:cts:greekLit:tlg0012.tlg001.oct>  rdf:label "Homeric poetry, Iliad (Allen OCT)" .
-
-<urn:cts:greekLit:tlg0012.tlg001> rdf:type cts:Work .
-<urn:cts:greekLit:tlg0012.tlg001> dcterms:title "Iliad" .
-<urn:cts:greekLit:tlg0012.tlg001> cts:belongsTo <urn:cts:greekLit:tlg0012> .
-<urn:cts:greekLit:tlg0012> cts:possesses <urn:cts:greekLit:tlg0012.tlg001> .
-
-<urn:cts:greekLit:tlg0012.tlg001> cts:lang "grc" .
+<urn:cts:greekLit:tlg0013.tlg011.chs02>  cts:translationLang "eng" .
 
 
-<urn:cts:greekLit:tlg0012.tlg001> rdf:label "Homeric poetry, Iliad" .
+<urn:cts:greekLit:tlg0013.tlg011.chs02>  rdf:label "Homeric Hymns, In Minervam (Evelyn-White)" .
 
-<urn:cts:greekLit:tlg0012> cts:belongsTo <urn:cts:greekLit> .
-<urn:cts:greekLit> cts:possesses <urn:cts:greekLit:tlg0012> .
-<urn:cts:greekLit:tlg0012> rdf:type cts:TextGroup .
-<urn:cts:greekLit:tlg0012> dcterms:title "Homeric poetry" .
+<http://www.tei-c.org/ns/1.0> cts:abbreviatedBy "tei" .
+<urn:cts:latinLit:stoa0115.stoa002.stoa01> cts:xmlns <http://www.tei-c.org/ns/1.0> .
+<urn:cts:demo:demodocs.mixedpoem.local01> cts:xmlns <http://www.tei-c.org/ns/1.0> .
+<urn:cts:greekLit:tlg0013.tlg011.chs01> cts:xmlns <http://www.tei-c.org/ns/1.0> .
+<urn:cts:latinLit:stoa0115.stoa002.stoa01> cts:belongsTo <urn:cts:latinLit:stoa0115.stoa002> .
+<urn:cts:latinLit:stoa0115.stoa002> cts:possesses <urn:cts:latinLit:stoa0115.stoa002.stoa01> .
+<urn:cts:latinLit:stoa0115.stoa002.stoa01> dcterms:title "Scaife" .
 
-<urn:cts:greekLit:tlg0012> rdf:label "Homeric poetry" .
+<urn:cts:latinLit:stoa0115.stoa002.stoa01> rdf:type cts:Edition .
+
+<urn:cts:latinLit:stoa0115.stoa002.stoa01>  rdf:label "Erasmus, Colloquia Familiaria (Scaife)" .
+
+<urn:cts:latinLit:stoa0115.stoa002> rdf:type cts:Work .
+<urn:cts:latinLit:stoa0115.stoa002> dcterms:title "Colloquia Familiaria" .
+<urn:cts:latinLit:stoa0115.stoa002> cts:belongsTo <urn:cts:latinLit:stoa0115> .
+<urn:cts:latinLit:stoa0115> cts:possesses <urn:cts:latinLit:stoa0115.stoa002> .
+
+<urn:cts:latinLit:stoa0115.stoa002> cts:lang "lat" .
+
+
+<urn:cts:latinLit:stoa0115.stoa002> rdf:label "Erasmus, Colloquia Familiaria" .
+
+<urn:cts:latinLit:stoa0115> cts:belongsTo <urn:cts:latinLit> .
+<urn:cts:latinLit> cts:possesses <urn:cts:latinLit:stoa0115> .
+<urn:cts:latinLit:stoa0115> rdf:type cts:TextGroup .
+<urn:cts:latinLit:stoa0115> dcterms:title "Erasmus" .
+
+<urn:cts:latinLit:stoa0115> rdf:label "Erasmus" .
+
+<urn:cts:demo:demodocs.mixedpoem.local01> cts:belongsTo <urn:cts:demo:demodocs.mixedpoem> .
+<urn:cts:demo:demodocs.mixedpoem> cts:possesses <urn:cts:demo:demodocs.mixedpoem.local01> .
+<urn:cts:demo:demodocs.mixedpoem.local01> dcterms:title "Demo" .
+
+<urn:cts:demo:demodocs.mixedpoem.local01> rdf:type cts:Edition .
+
+<urn:cts:demo:demodocs.mixedpoem.local01>  rdf:label "Test and demo documents, Poem with preface (Demo)" .
+
+<urn:cts:demo:demodocs.mixedpoem> rdf:type cts:Work .
+<urn:cts:demo:demodocs.mixedpoem> dcterms:title "Poem with preface" .
+<urn:cts:demo:demodocs.mixedpoem> cts:belongsTo <urn:cts:demo:demodocs> .
+<urn:cts:demo:demodocs> cts:possesses <urn:cts:demo:demodocs.mixedpoem> .
+
+<urn:cts:demo:demodocs.mixedpoem> cts:lang "eng" .
+
+
+<urn:cts:demo:demodocs.mixedpoem> rdf:label "Test and demo documents, Poem with preface" .
+
+<urn:cts:demo:demodocs> cts:belongsTo <urn:cts:demo> .
+<urn:cts:demo> cts:possesses <urn:cts:demo:demodocs> .
+<urn:cts:demo:demodocs> rdf:type cts:TextGroup .
+<urn:cts:demo:demodocs> dcterms:title "Test and demo documents" .
+
+<urn:cts:demo:demodocs> rdf:label "Test and demo documents" .
+
+<urn:cts:greekLit:tlg0013.tlg011.chs01> cts:belongsTo <urn:cts:greekLit:tlg0013.tlg011> .
+<urn:cts:greekLit:tlg0013.tlg011> cts:possesses <urn:cts:greekLit:tlg0013.tlg011.chs01> .
+<urn:cts:greekLit:tlg0013.tlg011.chs01> dcterms:title "CHS" .
+
+<urn:cts:greekLit:tlg0013.tlg011.chs01> rdf:type cts:Edition .
+
+<urn:cts:greekLit:tlg0013.tlg011.chs01>  rdf:label "Homeric Hymns, In Minervam (CHS)" .
+
+<urn:cts:greekLit:tlg0013.tlg011> rdf:type cts:Work .
+<urn:cts:greekLit:tlg0013.tlg011> dcterms:title "In Minervam" .
+<urn:cts:greekLit:tlg0013.tlg011> cts:belongsTo <urn:cts:greekLit:tlg0013> .
+<urn:cts:greekLit:tlg0013> cts:possesses <urn:cts:greekLit:tlg0013.tlg011> .
+
+<urn:cts:greekLit:tlg0013.tlg011> cts:lang "grc-c" .
+
+
+<urn:cts:greekLit:tlg0013.tlg011> rdf:label "Homeric Hymns, In Minervam" .
+
+<urn:cts:greekLit:tlg0013> cts:belongsTo <urn:cts:greekLit> .
+<urn:cts:greekLit> cts:possesses <urn:cts:greekLit:tlg0013> .
+<urn:cts:greekLit:tlg0013> rdf:type cts:TextGroup .
+<urn:cts:greekLit:tlg0013> dcterms:title "Homeric Hymns" .
+
+<urn:cts:greekLit:tlg0013> rdf:label "Homeric Hymns" .
 
 <urn:cts:greekLit:tlg0013.tlg011.chs02> cts:belongsTo <urn:cts:greekLit:tlg0013.tlg011> .
 <urn:cts:greekLit:tlg0013.tlg011> cts:possesses <urn:cts:greekLit:tlg0013.tlg011.chs02> .
@@ -1254,3 +1318,184 @@
 <urn:cts:latinLit:stoa0115.stoa002.stoa01:2.1.17> cite:next <urn:cts:latinLit:stoa0115.stoa002.stoa01:2.1.18> . 
 <urn:cts:latinLit:stoa0115.stoa002.stoa01:2.1.17> cite:prev <urn:cts:latinLit:stoa0115.stoa002.stoa01:2.1.16> . 
 <urn:cts:latinLit:stoa0115.stoa002.stoa01:2.1.18> cite:prev <urn:cts:latinLit:stoa0115.stoa002.stoa01:2.1.17> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.1> rdf:label "Test and demo documents, Poem with preface (Demo): preface.1 (urn:cts:demo:demodocs.mixedpoem.local01:preface.1)" .
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.1> cts:belongsTo <urn:cts:demo:demodocs.mixedpoem.local01> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.1> cts:hasSequence 1 .
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.1> cts:hasTextContent """<p n="1">Preface begins with this paragraph.</p>""" .
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.1> cts:citationDepth 2 .
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.1> hmt:xmlOpen "/TEI/text/body/div[@type = 'preface' and @n = 'preface']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.1> hmt:xpTemplate "/TEI/text/body/div[@type = 'preface' and @n = '?']/p[@n = '?']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.1> cts:containedBy <urn:cts:demo:demodocs.mixedpoem.local01:preface> .
+<urn:cts:demo:demodocs.mixedpoem.local01:preface> cts:contains <urn:cts:demo:demodocs.mixedpoem.local01:preface.1>  .
+<urn:cts:demo:demodocs.mixedpoem.local01:preface> cts:citationDepth 1 .
+
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.2> rdf:label "Test and demo documents, Poem with preface (Demo): preface.2 (urn:cts:demo:demodocs.mixedpoem.local01:preface.2)" .
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.2> cts:belongsTo <urn:cts:demo:demodocs.mixedpoem.local01> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.2> cts:hasSequence 2 .
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.2> cts:hasTextContent """<p n="2">This document mocks up a text with preface by numbered paragraph, and two divs with a poem in two different languages.</p>""" .
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.2> cts:citationDepth 2 .
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.2> hmt:xmlOpen "/TEI/text/body/div[@type = 'preface' and @n = 'preface']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.2> hmt:xpTemplate "/TEI/text/body/div[@type = 'preface' and @n = '?']/p[@n = '?']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.2> cts:containedBy <urn:cts:demo:demodocs.mixedpoem.local01:preface> .
+<urn:cts:demo:demodocs.mixedpoem.local01:preface> cts:contains <urn:cts:demo:demodocs.mixedpoem.local01:preface.2>  .
+<urn:cts:demo:demodocs.mixedpoem.local01:preface> cts:citationDepth 1 .
+
+<urn:cts:demo:demodocs.mixedpoem.local01:1.1> rdf:label "Test and demo documents, Poem with preface (Demo): 1.1 (urn:cts:demo:demodocs.mixedpoem.local01:1.1)" .
+<urn:cts:demo:demodocs.mixedpoem.local01:1.1> cts:belongsTo <urn:cts:demo:demodocs.mixedpoem.local01> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:1.1> cts:hasSequence 3 .
+<urn:cts:demo:demodocs.mixedpoem.local01:1.1> cts:hasTextContent """<l n="1">Line 1 of a poem</l>""" .
+<urn:cts:demo:demodocs.mixedpoem.local01:1.1> cts:citationDepth 2 .
+<urn:cts:demo:demodocs.mixedpoem.local01:1.1> hmt:xmlOpen "/TEI/text/body/div[@type = 'book' and @n='1']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:1.1> hmt:xpTemplate "/TEI/text/body/div[@type = 'book' and @n='?']/l[@n = '?']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:1.1> cts:containedBy <urn:cts:demo:demodocs.mixedpoem.local01:1> .
+<urn:cts:demo:demodocs.mixedpoem.local01:1> cts:contains <urn:cts:demo:demodocs.mixedpoem.local01:1.1>  .
+<urn:cts:demo:demodocs.mixedpoem.local01:1> cts:citationDepth 1 .
+
+<urn:cts:demo:demodocs.mixedpoem.local01:1.2> rdf:label "Test and demo documents, Poem with preface (Demo): 1.2 (urn:cts:demo:demodocs.mixedpoem.local01:1.2)" .
+<urn:cts:demo:demodocs.mixedpoem.local01:1.2> cts:belongsTo <urn:cts:demo:demodocs.mixedpoem.local01> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:1.2> cts:hasSequence 4 .
+<urn:cts:demo:demodocs.mixedpoem.local01:1.2> cts:hasTextContent """<l n="2">Line 2 of the same poem</l>""" .
+<urn:cts:demo:demodocs.mixedpoem.local01:1.2> cts:citationDepth 2 .
+<urn:cts:demo:demodocs.mixedpoem.local01:1.2> hmt:xmlOpen "/TEI/text/body/div[@type = 'book' and @n='1']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:1.2> hmt:xpTemplate "/TEI/text/body/div[@type = 'book' and @n='?']/l[@n = '?']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:1.2> cts:containedBy <urn:cts:demo:demodocs.mixedpoem.local01:1> .
+<urn:cts:demo:demodocs.mixedpoem.local01:1> cts:contains <urn:cts:demo:demodocs.mixedpoem.local01:1.2>  .
+<urn:cts:demo:demodocs.mixedpoem.local01:1> cts:citationDepth 1 .
+
+<urn:cts:demo:demodocs.mixedpoem.local01:2.1> rdf:label "Test and demo documents, Poem with preface (Demo): 2.1 (urn:cts:demo:demodocs.mixedpoem.local01:2.1)" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.1> cts:belongsTo <urn:cts:demo:demodocs.mixedpoem.local01> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:2.1> cts:hasSequence 5 .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.1> cts:hasTextContent """<l n="1">Παλλάδ' Ἀθηναίην ἐρυσίπτολιν ἄρχομ' ἀείδειν</l>""" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.1> cts:citationDepth 2 .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.1> hmt:xmlOpen "/TEI/text/body/div[@type = 'book' and @n='2']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.1> hmt:xpTemplate "/TEI/text/body/div[@type = 'book' and @n='?']/l[@n = '?']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.1> cts:containedBy <urn:cts:demo:demodocs.mixedpoem.local01:2> .
+<urn:cts:demo:demodocs.mixedpoem.local01:2> cts:contains <urn:cts:demo:demodocs.mixedpoem.local01:2.1>  .
+<urn:cts:demo:demodocs.mixedpoem.local01:2> cts:citationDepth 1 .
+
+<urn:cts:demo:demodocs.mixedpoem.local01:2.2> rdf:label "Test and demo documents, Poem with preface (Demo): 2.2 (urn:cts:demo:demodocs.mixedpoem.local01:2.2)" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.2> cts:belongsTo <urn:cts:demo:demodocs.mixedpoem.local01> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:2.2> cts:hasSequence 6 .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.2> cts:hasTextContent """<l n="2">δεινήν, ᾗ σὺν Ἄρηϊ μέλει πολεμήϊα ἔργα</l>""" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.2> cts:citationDepth 2 .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.2> hmt:xmlOpen "/TEI/text/body/div[@type = 'book' and @n='2']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.2> hmt:xpTemplate "/TEI/text/body/div[@type = 'book' and @n='?']/l[@n = '?']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.2> cts:containedBy <urn:cts:demo:demodocs.mixedpoem.local01:2> .
+<urn:cts:demo:demodocs.mixedpoem.local01:2> cts:contains <urn:cts:demo:demodocs.mixedpoem.local01:2.2>  .
+<urn:cts:demo:demodocs.mixedpoem.local01:2> cts:citationDepth 1 .
+
+<urn:cts:demo:demodocs.mixedpoem.local01:2.3> rdf:label "Test and demo documents, Poem with preface (Demo): 2.3 (urn:cts:demo:demodocs.mixedpoem.local01:2.3)" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.3> cts:belongsTo <urn:cts:demo:demodocs.mixedpoem.local01> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:2.3> cts:hasSequence 7 .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.3> cts:hasTextContent """<l n="3">περθόμεναί τε πόληες ἀϋτή τε πτόλεμοί τε,</l>""" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.3> cts:citationDepth 2 .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.3> hmt:xmlOpen "/TEI/text/body/div[@type = 'book' and @n='2']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.3> hmt:xpTemplate "/TEI/text/body/div[@type = 'book' and @n='?']/l[@n = '?']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.3> cts:containedBy <urn:cts:demo:demodocs.mixedpoem.local01:2> .
+<urn:cts:demo:demodocs.mixedpoem.local01:2> cts:contains <urn:cts:demo:demodocs.mixedpoem.local01:2.3>  .
+<urn:cts:demo:demodocs.mixedpoem.local01:2> cts:citationDepth 1 .
+
+<urn:cts:demo:demodocs.mixedpoem.local01:2.4> rdf:label "Test and demo documents, Poem with preface (Demo): 2.4 (urn:cts:demo:demodocs.mixedpoem.local01:2.4)" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.4> cts:belongsTo <urn:cts:demo:demodocs.mixedpoem.local01> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:2.4> cts:hasSequence 8 .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.4> cts:hasTextContent """<l n="4">καί τ' ἐρρύσατο λαὸν ἰόντα τε νισόμενόν τε.</l>""" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.4> cts:citationDepth 2 .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.4> hmt:xmlOpen "/TEI/text/body/div[@type = 'book' and @n='2']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.4> hmt:xpTemplate "/TEI/text/body/div[@type = 'book' and @n='?']/l[@n = '?']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.4> cts:containedBy <urn:cts:demo:demodocs.mixedpoem.local01:2> .
+<urn:cts:demo:demodocs.mixedpoem.local01:2> cts:contains <urn:cts:demo:demodocs.mixedpoem.local01:2.4>  .
+<urn:cts:demo:demodocs.mixedpoem.local01:2> cts:citationDepth 1 .
+
+<urn:cts:demo:demodocs.mixedpoem.local01:2.5> rdf:label "Test and demo documents, Poem with preface (Demo): 2.5 (urn:cts:demo:demodocs.mixedpoem.local01:2.5)" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.5> cts:belongsTo <urn:cts:demo:demodocs.mixedpoem.local01> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:2.5> cts:hasSequence 9 .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.5> cts:hasTextContent """<l n="5">Χαῖρε θεά, δὸς δ' ἄμμι τύχην εὐδαιμονίην τε.</l>""" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.5> cts:citationDepth 2 .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.5> hmt:xmlOpen "/TEI/text/body/div[@type = 'book' and @n='2']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.5> hmt:xpTemplate "/TEI/text/body/div[@type = 'book' and @n='?']/l[@n = '?']" .
+<urn:cts:demo:demodocs.mixedpoem.local01:2.5> cts:containedBy <urn:cts:demo:demodocs.mixedpoem.local01:2> .
+<urn:cts:demo:demodocs.mixedpoem.local01:2> cts:contains <urn:cts:demo:demodocs.mixedpoem.local01:2.5>  .
+<urn:cts:demo:demodocs.mixedpoem.local01:2> cts:citationDepth 1 .
+
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.1> cite:next <urn:cts:demo:demodocs.mixedpoem.local01:preface.2> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.2> cite:next <urn:cts:demo:demodocs.mixedpoem.local01:1.1> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:preface.2> cite:prev <urn:cts:demo:demodocs.mixedpoem.local01:preface.1> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:1.1> cite:next <urn:cts:demo:demodocs.mixedpoem.local01:1.2> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:1.1> cite:prev <urn:cts:demo:demodocs.mixedpoem.local01:preface.2> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:1.2> cite:next <urn:cts:demo:demodocs.mixedpoem.local01:2.1> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:1.2> cite:prev <urn:cts:demo:demodocs.mixedpoem.local01:1.1> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:2.1> cite:next <urn:cts:demo:demodocs.mixedpoem.local01:2.2> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:2.1> cite:prev <urn:cts:demo:demodocs.mixedpoem.local01:1.2> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:2.2> cite:next <urn:cts:demo:demodocs.mixedpoem.local01:2.3> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:2.2> cite:prev <urn:cts:demo:demodocs.mixedpoem.local01:2.1> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:2.3> cite:next <urn:cts:demo:demodocs.mixedpoem.local01:2.4> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:2.3> cite:prev <urn:cts:demo:demodocs.mixedpoem.local01:2.2> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:2.4> cite:next <urn:cts:demo:demodocs.mixedpoem.local01:2.5> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:2.4> cite:prev <urn:cts:demo:demodocs.mixedpoem.local01:2.3> . 
+<urn:cts:demo:demodocs.mixedpoem.local01:2.5> cite:prev <urn:cts:demo:demodocs.mixedpoem.local01:2.4> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs01:1> rdf:label "Homeric Hymns, In Minervam (CHS): 1 (urn:cts:greekLit:tlg0013.tlg011.chs01:1)" .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:1> cts:belongsTo <urn:cts:greekLit:tlg0013.tlg011.chs01> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs01:1> cts:hasSequence 1 .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:1> cts:hasTextContent """<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="1">Παλλάδ' Ἀθηναίην ἐρυσίπτολιν ἄρχομ' ἀείδειν</l>""" .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:1> cts:citationDepth 1 .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:1> hmt:xmlOpen "/tei:TEI/tei:text/tei:body" .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:1> hmt:xpTemplate "/tei:TEI/tei:text/tei:body/tei:l[@n = '?']" .
+
+<urn:cts:greekLit:tlg0013.tlg011.chs01:2> rdf:label "Homeric Hymns, In Minervam (CHS): 2 (urn:cts:greekLit:tlg0013.tlg011.chs01:2)" .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:2> cts:belongsTo <urn:cts:greekLit:tlg0013.tlg011.chs01> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs01:2> cts:hasSequence 2 .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:2> cts:hasTextContent """<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="2">δεινήν, ᾗ σὺν Ἄρηϊ μέλει πολεμήϊα ἔργα</l>""" .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:2> cts:citationDepth 1 .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:2> hmt:xmlOpen "/tei:TEI/tei:text/tei:body" .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:2> hmt:xpTemplate "/tei:TEI/tei:text/tei:body/tei:l[@n = '?']" .
+
+<urn:cts:greekLit:tlg0013.tlg011.chs01:3> rdf:label "Homeric Hymns, In Minervam (CHS): 3 (urn:cts:greekLit:tlg0013.tlg011.chs01:3)" .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:3> cts:belongsTo <urn:cts:greekLit:tlg0013.tlg011.chs01> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs01:3> cts:hasSequence 3 .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:3> cts:hasTextContent """<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="3">περθόμεναί τε πόληες ἀϋτή τε πτόλεμοί τε,</l>""" .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:3> cts:citationDepth 1 .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:3> hmt:xmlOpen "/tei:TEI/tei:text/tei:body" .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:3> hmt:xpTemplate "/tei:TEI/tei:text/tei:body/tei:l[@n = '?']" .
+
+<urn:cts:greekLit:tlg0013.tlg011.chs01:4> rdf:label "Homeric Hymns, In Minervam (CHS): 4 (urn:cts:greekLit:tlg0013.tlg011.chs01:4)" .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:4> cts:belongsTo <urn:cts:greekLit:tlg0013.tlg011.chs01> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs01:4> cts:hasSequence 4 .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:4> cts:hasTextContent """<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="4">καί τ' ἐρρύσατο λαὸν ἰόντα τε νισόμενόν τε.</l>""" .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:4> cts:citationDepth 1 .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:4> hmt:xmlOpen "/tei:TEI/tei:text/tei:body" .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:4> hmt:xpTemplate "/tei:TEI/tei:text/tei:body/tei:l[@n = '?']" .
+
+<urn:cts:greekLit:tlg0013.tlg011.chs01:5> rdf:label "Homeric Hymns, In Minervam (CHS): 5 (urn:cts:greekLit:tlg0013.tlg011.chs01:5)" .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:5> cts:belongsTo <urn:cts:greekLit:tlg0013.tlg011.chs01> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs01:5> cts:hasSequence 5 .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:5> cts:hasTextContent """<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="5">Χαῖρε θεά, δὸς δ' ἄμμι τύχην εὐδαιμονίην τε.</l>""" .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:5> cts:citationDepth 1 .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:5> hmt:xmlOpen "/tei:TEI/tei:text/tei:body" .
+<urn:cts:greekLit:tlg0013.tlg011.chs01:5> hmt:xpTemplate "/tei:TEI/tei:text/tei:body/tei:l[@n = '?']" .
+
+<urn:cts:greekLit:tlg0013.tlg011.chs01:1> cite:next <urn:cts:greekLit:tlg0013.tlg011.chs01:2> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs01:2> cite:next <urn:cts:greekLit:tlg0013.tlg011.chs01:3> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs01:2> cite:prev <urn:cts:greekLit:tlg0013.tlg011.chs01:1> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs01:3> cite:next <urn:cts:greekLit:tlg0013.tlg011.chs01:4> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs01:3> cite:prev <urn:cts:greekLit:tlg0013.tlg011.chs01:2> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs01:4> cite:next <urn:cts:greekLit:tlg0013.tlg011.chs01:5> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs01:4> cite:prev <urn:cts:greekLit:tlg0013.tlg011.chs01:3> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs01:5> cite:prev <urn:cts:greekLit:tlg0013.tlg011.chs01:4> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs02:1-4> rdf:label "Homeric Hymns, In Minervam (Evelyn-White): 1-4 (urn:cts:greekLit:tlg0013.tlg011.chs02:1-4)" .
+<urn:cts:greekLit:tlg0013.tlg011.chs02:1-4> cts:belongsTo <urn:cts:greekLit:tlg0013.tlg011.chs02> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs02:1-4> cts:hasSequence 1 .
+<urn:cts:greekLit:tlg0013.tlg011.chs02:1-4> cts:hasTextContent """<l xmlns="http://www.tei-c.org/ns/1.0" n="1-4"> Of Pallas Athene, guardian of the city, I begin to sing. Dread is she, and with Ares she loves deeds of war, the sack of cities and the shouting and the battle. It is she who saves the people as they go out to war and come back.</l>""" .
+<urn:cts:greekLit:tlg0013.tlg011.chs02:1-4> cts:citationDepth 1 .
+<urn:cts:greekLit:tlg0013.tlg011.chs02:1-4> hmt:xmlOpen "/tei:TEI/tei:text/tei:body" .
+<urn:cts:greekLit:tlg0013.tlg011.chs02:1-4> hmt:xpTemplate "/tei:TEI/tei:text/tei:body/tei:l[@n = '?']" .
+
+<urn:cts:greekLit:tlg0013.tlg011.chs02:5> rdf:label "Homeric Hymns, In Minervam (Evelyn-White): 5 (urn:cts:greekLit:tlg0013.tlg011.chs02:5)" .
+<urn:cts:greekLit:tlg0013.tlg011.chs02:5> cts:belongsTo <urn:cts:greekLit:tlg0013.tlg011.chs02> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs02:5> cts:hasSequence 2 .
+<urn:cts:greekLit:tlg0013.tlg011.chs02:5> cts:hasTextContent """<l xmlns="http://www.tei-c.org/ns/1.0" n="5">Hail, goddess, and give us good fortune with happiness!</l>""" .
+<urn:cts:greekLit:tlg0013.tlg011.chs02:5> cts:citationDepth 1 .
+<urn:cts:greekLit:tlg0013.tlg011.chs02:5> hmt:xmlOpen "/tei:TEI/tei:text/tei:body" .
+<urn:cts:greekLit:tlg0013.tlg011.chs02:5> hmt:xpTemplate "/tei:TEI/tei:text/tei:body/tei:l[@n = '?']" .
+
+<urn:cts:greekLit:tlg0013.tlg011.chs02:1-4> cite:next <urn:cts:greekLit:tlg0013.tlg011.chs02:5> . 
+<urn:cts:greekLit:tlg0013.tlg011.chs02:5> cite:prev <urn:cts:greekLit:tlg0013.tlg011.chs02:1-4> . 
