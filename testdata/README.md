@@ -1,4 +1,4 @@
-CTS Test Suite:  version Beta 2 (June 2009)
+# Test suite to evaluate implementeations of CTS version 5.0
 
 This directory contains a corpus of test data, a suite of test requests, and expeced XML replies, for evaluating the compliance of a CTS iplementation with the CTS specification.
 

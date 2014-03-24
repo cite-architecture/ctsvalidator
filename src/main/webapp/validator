@@ -34,6 +34,7 @@
 
 
 
+
 // Use IBM's Normalizer class to canonicalize UTF-8 text data
 import com.ibm.icu.text.Normalizer
 // Use XML Unit for XML comparisons
@@ -45,11 +46,41 @@ import edu.harvard.chs.f1k.GreekNode
 def versionInfo ="version designed for CTS specification 5.0.rc.1"
 
 
+
+
+
+// Read actual and expected data as Strings, use IBM's
+// Normalizer to normalize UTF-8 characters, then use
+// groovy's DOMBuilder to parse the normalized Strings
+
+/**
+ * @param req URL String of request to test.
+ */
+org.custommonkey.xmlunit.Diff  testDiff(String req, String testFile) {
+  def actual  = new URL(req).getText("UTF-8")
+  actual = Normalizer.normalize(actual, Normalizer.NFC) 
+  groovy.xml.Namespace ctsns = new groovy.xml.Namespace("http://chs.harvard.edu/xmlns/cts")
+
+
+  def root1 = new  XmlParser().parseText(actual)
+  groovy.util.Node actualReplyNode  = root1[ctsns.reply][0]
+  def expected = new File(testFile).getText("UTF-8")
+  expected = Normalizer.normalize(expected, Normalizer.NFC)
+
+  // Explicitly set both of these before XML-based comparison:
+  XMLUnit.setIgnoreWhitespace(true)
+  XMLUnit.setNormalizeWhitespace(true)
+  XMLUnit.setIgnoreComments(true)
+
+  def xmlDiff = new Diff(expected, actual )
+  return xmlDiff
+}
+
 // Two prerequisites for testing:  
 // 1) a valid set of test files (the expected data in comparisons)
 // 2) a live CTS installation (the actual data in comparisons)
 
-// 1: test file with cts3 suite of tests
+// 1: test file with suite of tests
 boolean testFileOK = false
 def testsDir = context.getRealPath("/testsuites")
 def testFile = new File(testsDir + "/tests.xml")
@@ -91,9 +122,9 @@ if (!testFileOK) {
 
 
 
-} else { // All prerequistes passed:  now read and apply tests
-
-  // organize tests by request:
+} else { 
+  // All prerequistes passed:  now read and apply tests.
+  // Organize tests by request:
   def testData = [:]
   def testXml = new XmlSlurper().parse(testFile) // if your testFile is no good, you're in trouble
   testXml.test.each { t ->
@@ -137,7 +168,7 @@ if (!testFileOK) {
 
       testData.keySet().each { requestName ->
 	currentRequest = requestName
-	System.err.println "\nCurrent request now " + currentRequest + "\n"
+
 	h2("${requestName}")
 
 
@@ -153,6 +184,7 @@ if (!testFileOK) {
 	    th("Test")
 	    th("Summary of test")
 	    th("Results")
+	    th("Details")
 	  }
 	  testList.each { test ->
 	    String id = test[0]
@@ -165,25 +197,51 @@ if (!testFileOK) {
 	    totalTests++;
 
 
-	    def req = url + "?request=${requestName}&urn=${urn}&${params}"
+	    String req = url + "?request=${requestName}&urn=${urn}&${params}"
+	    String testFileName = "${testsDir}/${id}.xml"
+	    Diff diffResult = testDiff(req,testFileName)
 
-	    def actual  = new URL(req).getText("UTF-8")
-	    actual = Normalizer.normalize(actual, Normalizer.NFC) 
-	    groovy.xml.Namespace ctsns = new groovy.xml.Namespace("http://chs.harvard.edu/xmlns/cts")
+	    /*
 
-
-
+  //println   "<td class='fail'>failed</td><td>"
+    def details = new DetailedDiff(xmlDiff)
+    def allDiffs = details.getAllDifferences()
+    //println   "<ul>"
+    allDiffs.each {
+      //	  println   "<li>${it}</li>"
+    }
+    //println   "</ul>"
+    //println   "</td>"
+}
+*/
 	    tr {
 	      td {
 		a(href: "${req}","${id}")
 	      }
 	      td {
-		a(href: "${req}")
-	      }
-	      td {
 		mkp.yield "${description} (cf. "
 		a(href: "testsuites/${id}.xml", "expected result")
 		mkp.yield ")"
+	      }
+
+	      if (diffResult.identical()) {
+		td (class: "ok", "success")
+		td("")
+		currentSuccess++;
+		totalSuccess++;
+
+	      } else {
+		td(class : "fail", "failed")
+		
+		def details = new DetailedDiff(diffResult)
+		def allDiffs = details.getAllDifferences()
+		td {
+		  ul {
+		    allDiffs.each {
+		      li(it)
+		    }
+		  }
+		}
 	      }
 	    }
 	  }
@@ -193,6 +251,7 @@ if (!testFileOK) {
 	    th {
 	      mkp.yield "Total for "
 	      code("${currentRequest}")
+
 	    }
 	    td( "${currentSuccess}/${currentTests}")    
 	    
@@ -205,50 +264,6 @@ if (!testFileOK) {
 }
 
 /*
-
-<td>
-"""
-
-// Read actual and expected data as Strings, use IBM's
-// Normalizer to normalize UTF-8 characters, then use
-// groovy's DOMBuilder to parse the normalized Strings
-
-
-
-
-
-def root1 = new  XmlParser().parseText(actual)
-groovy.util.Node actualReplyNode  = root1[ctsns.reply][0]
-GreekNode gn = new GreekNode("<test>One element</test>\n")
-println "<td>ROOT 1: " + actualReplyNode.getClass() + "</td>"
-
-
-def expected = new File(testsDir + "/${t.@id}.xml").getText("UTF-8")
-expected = Normalizer.normalize(expected, Normalizer.NFC)
-
-// Explicitly set both of these before XML-based comparison:
-XMLUnit.setIgnoreWhitespace(true)
-XMLUnit.setNormalizeWhitespace(true)
-XMLUnit.setIgnoreComments(true)
-
-def xmlDiff = new Diff(expected, actual )
-if (xmlDiff.identical()) {
-  //    println   "<td class='ok'>success</td>"
-  //    println "<td></td>"
-    currentSuccess++
-    totalSuccess++
-
-} else {
-  //println   "<td class='fail'>failed</td><td>"
-    def details = new DetailedDiff(xmlDiff)
-    def allDiffs = details.getAllDifferences()
-    //println   "<ul>"
-    allDiffs.each {
-      //	  println   "<li>${it}</li>"
-    }
-    //println   "</ul>"
-    //println   "</td>"
-}
 
 
 println   "</tr>"
