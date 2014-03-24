@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<cts:CTSError   xmlns:cts="http://chs.harvard.edu/xmlns/cts3" 
-	   xmlns="http://chs.harvard.edu/xmlns/cts3">
-<message>INVALID REQUEST. Missing required parameter: 'urn'</message>
-<code>1</code>
-</cts:CTSError>
