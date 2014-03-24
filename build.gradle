@@ -3,3 +3,21 @@ apply plugin: 'jetty'
 
 
 apply from: "conf.gradle"
+
+apply from: "versions.gradle"
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://beta.hpcc.uh.edu/nexus/content/groups/public"
+    }
+}
+
+dependencies {
+  compile group: 'org.codehaus.groovy', name: 'groovy-all', version: groovyversion
+  compile group: 'edu.harvard.chs', name : 'greekutils' , version: greekutilsversion
+
+  runtime group: 'org.codehaus.groovy', name: 'groovy-all', version: groovyversion
+  runtime group: 'edu.harvard.chs', name : 'greekutils' , version: greekutilsversion
+}
+
