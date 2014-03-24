@@ -62,7 +62,7 @@
           <urn>urn:cts:latinLit:stoa0115.stoa002:preface.43-1.INVALID</urn>
           <otherparams/>
      </test>
--->
+
      <test
           id="3-07">
           <description>Request on valid notional work: reply element matches.</description>
@@ -78,7 +78,7 @@
           <urn>urn:cts:greekLit:tlg0013.tlg011.chs01</urn>
           <otherparams/>
      </test>
-<!--
+
      <test
           id="3-09">
           <description>Request for containing passage reference: reply element matches.</description>
@@ -253,6 +253,7 @@
           <urn>urn:cts:greekLit:tlg0013.tlg011:3</urn>
           <otherparams/>
      </test>
+     -->
 
      <test
           id="4-08">
@@ -261,6 +262,8 @@
           <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:3</urn>
           <otherparams/>
      </test>
+     
+     <!--
      <test
           id="4-09">
           <description>Request for initial node of notional work: reply element matches.</description>

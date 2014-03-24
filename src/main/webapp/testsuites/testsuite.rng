@@ -26,6 +26,7 @@
                             <value>GetValidReff</value>
                             <value>GetPassage</value>
                             <value>GetPassagePlus</value>
+                            <value>GetPrevNextUrn</value>
                         </choice>
                     </element>
                     <element
