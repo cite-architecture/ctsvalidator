@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="file:/data/repos/git/ctsvalidator/src/main/webapp/testsuites/GetCapabilities.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<GetCapabilities xmlns="http://chs.harvard.edu/xmlns/cts">
+<GetCapabilities xmlns="http://chs.harvard.edu/xmlns/cts" xmlns:cts="http://chs.harvard.edu/xmlns/cts">
   <request></request>
   <reply>
 <TextInventory

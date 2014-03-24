@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cts:GetValidReff  xmlns:cts="http://chs.harvard.edu/xmlns/cts3" xmlns="http://chs.harvard.edu/xmlns/cts3">
+<GetValidReff  xmlns:cts="http://chs.harvard.edu/xmlns/cts" xmlns="http://chs.harvard.edu/xmlns/cts">
 <request>
 <requestName>GetValidReff</requestName>
 <requestUrn>urn:cts:greekLit:tlg0013.tlg011</requestUrn>
@@ -13,4 +13,4 @@
 <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:5</urn>
 </reff>
 </reply>
-</cts:GetValidReff>
+</GetValidReff>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cts:CTSError  xmlns:cts="http://chs.harvard.edu/xmlns/cts3" xmlns="http://chs.harvard.edu/xmlns/cts3">
+<CTSError  xmlns:cts="http://chs.harvard.edu/xmlns/cts" xmlns="http://chs.harvard.edu/xmlns/cts">
 <message>
 Invalid URN reference: urn:cts:greekLit:tlg0013.tlg011:6
 </message>
 <code>3</code>
-</cts:CTSError>
+</CTSError>

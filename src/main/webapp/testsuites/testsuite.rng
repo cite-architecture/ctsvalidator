@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+    xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+    <start>
+        <element
+            name="testsuite">
+            <oneOrMore>
+                <element
+                    name="test">
+                    <attribute
+                        name="id"/>
+                    <element
+                        name="description">
+                        <data
+                            type="string">
+                            <param
+                                name="pattern">.+</param>
+                        </data>
+                    </element>
+                    <element
+                        name="request">
+                        <choice>
+                            <value>GetCapabilities</value>
+                            <value>GetValidReff</value>
+                            <value>GetPassage</value>
+                            <value>GetPassagePlus</value>
+                        </choice>
+                    </element>
+                    <element
+                        name="urn">
+                        <text/>
+                    </element>
+                    <element
+                        name="otherparams">
+                        <text/>
+                    </element>
+                </element>
+            </oneOrMore>
+        </element>
+    </start>
+</grammar>

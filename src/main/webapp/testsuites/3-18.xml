@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cts:CTSError xmlns:cts="http://chs.harvard.edu/xmlns/cts3" 
-	   xmlns="http://chs.harvard.edu/xmlns/cts3">
+<cts:CTSError xmlns:cts="http://chs.harvard.edu/xmlns/cts" 
+	   xmlns="http://chs.harvard.edu/xmlns/cts">
 <message>Invalid value for level parameter: 0:  must be > 0</message>
 <code>4</code>
 </cts:CTSError>
