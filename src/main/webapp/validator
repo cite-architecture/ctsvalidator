@@ -112,6 +112,7 @@ if (!testFileOK) {
 
   def totalTests = 0
   def totalSuccess = 0
+  String currentRequest = ""
 
   html.html {
     head {
@@ -131,7 +132,12 @@ if (!testFileOK) {
       }
       p("Links on test IDs are to the URL used in the test.")
 
+
+
+
       testData.keySet().each { requestName ->
+	currentRequest = requestName
+	System.err.println "\nCurrent request now " + currentRequest + "\n"
 	h2("${requestName}")
 
 
@@ -158,13 +164,27 @@ if (!testFileOK) {
 	    currentTests++;
 	    totalTests++;
 
+
 	    def req = url + "?request=${requestName}&urn=${urn}&${params}"
+
+	    def actual  = new URL(req).getText("UTF-8")
+	    actual = Normalizer.normalize(actual, Normalizer.NFC) 
+	    groovy.xml.Namespace ctsns = new groovy.xml.Namespace("http://chs.harvard.edu/xmlns/cts")
+
+
 
 	    tr {
 	      td {
 		a(href: "${req}","${id}")
 	      }
-
+	      td {
+		a(href: "${req}")
+	      }
+	      td {
+		mkp.yield "${description} (cf. "
+		a(href: "testsuites/${id}.xml", "expected result")
+		mkp.yield ")"
+	      }
 	    }
 	  }
 
@@ -172,31 +192,14 @@ if (!testFileOK) {
 	    td("")
 	    th {
 	      mkp.yield "Total for "
-	      code: "${requestName}"
+	      code("${currentRequest}")
 	    }
 	    td( "${currentSuccess}/${currentTests}")    
 	    
 	    }
 	}
       }
-    }
-  }
-}
-
-
-      /*
-
-	    
-
-	      td ("$test.)
-
-<tr><td><a href="${req}">${t.@id}</a></td><td>${t.description}
-
-(cf. <a href="testsuites/${t.@id}.xml">expected result</a>)
-
-
-
-
+      p("Total for all requests: successes/total tests = ${totalSuccess}/${totalTests}")
     }
   }
 }
@@ -212,10 +215,6 @@ if (!testFileOK) {
 
 
 
-def actual  = new URL(req).getText("UTF-8")
-actual = Normalizer.normalize(actual, Normalizer.NFC) 
-
-groovy.xml.Namespace ctsns = new groovy.xml.Namespace("http://chs.harvard.edu/xmlns/cts")
 
 
 def root1 = new  XmlParser().parseText(actual)
@@ -259,7 +258,7 @@ println   """<tr><td/><th>Total for <code>${currentReq}</code></th><td>${current
 
 </table>
 <p>
-Total for all requests: successes/total tests = ${totalSuccess}/${totalTests}
+
 </p>
 </body>
 </html>
