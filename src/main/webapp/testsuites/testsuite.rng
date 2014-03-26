@@ -13,11 +13,7 @@
                         name="id"/>
                     <element
                         name="description">
-                        <data
-                            type="string">
-                            <param
-                                name="pattern">.+</param>
-                        </data>
+                        <text/>
                     </element>
                     <element
                         name="request">
