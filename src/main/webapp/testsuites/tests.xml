@@ -196,7 +196,6 @@
 
 
      <!-- GetPrevNextUrn -->
-<!--
      <test
           id="4-01">
           <description>Request with invalid URN syntax: error code matches.</description>
@@ -253,7 +252,7 @@
           <urn>urn:cts:greekLit:tlg0013.tlg011:3</urn>
           <otherparams/>
      </test>
-     -->
+  
 
      <test
           id="4-08">
@@ -263,7 +262,7 @@
           <otherparams/>
      </test>
      
-     <!--
+    
      <test
           id="4-09">
           <description>Request for initial node of notional work: reply element matches.</description>
@@ -334,7 +333,7 @@
           <urn>urn:cts:latinLit:stoa0115.stoa002:preface-1.1</urn>
           <otherparams/>
      </test>
--->
+
      <!--
 * ranges mixing containing nodes with leaf nodes
 -->

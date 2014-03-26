@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../rng/GetPrevNextUrn.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <cts:GetPrevNextUrn
-    xmlns="http://chs.harvard.edu/xmlns/cts3"
-    xmlns:cts="http://chs.harvard.edu/xmlns/cts3">
+    xmlns="http://chs.harvard.edu/xmlns/cts"
+    xmlns:cts="http://chs.harvard.edu/xmlns/cts">
     <request>
         <requestName>GetPrevNextUrn</requestName>
         <requestUrn>urn:cts:greekLit:tlg0013.tlg011.chs01:1-5</requestUrn>
     </request>
     <reply>
         <prevnext>
-            <prev/>
-            <next/>
+            <prev><urn/></prev>
+            <next><urn/></next>
         </prevnext>
     </reply>
 </cts:GetPrevNextUrn>
