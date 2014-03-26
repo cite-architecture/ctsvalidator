@@ -1,12 +1,12 @@
 #ctsvalidator#
 
-A test suite and accompanying `gradle` build to validate compliance of CTS instances with the CTS API.  It currently uses schemas for CTS 5.0.rc.1.
+A test suite and accompanying servlet to validate compliance of CTS instances with the CTS API.  It currently uses schemas for CTS 5.0.rc.1.
 
-The test suite includes an archive of texts in three different formats for loading into a CTS instance, together with a CTS TextInventory identifying the texgts.  The three formats are equivalent under the OHCO2 model of texts:
+The test suite includes an archive of texts in three different formats for loading into a CTS instance, together with a CTS TextInventory identifying the texts.  The three formats are equivalent under the OHCO2 model:
 
-- an archival text format.  Examples include both namespaced XML, and non-namespaced XML.  Files are in `testdata/testcorpus_texts`, with accompanying text inventory in `testdata/inventory.xml`.
-- a tabular representation.  Files are in `testdata/testcorpus_tabs`.
-- an RDF representation in TTL format.  Data are in a single file, `testdata/testcorpus.ttl`.
+1. an archival text format.  Examples include both namespaced XML, and non-namespaced XML.  Files are in `testdata/testcorpus_texts`, with accompanying text inventory in `testdata/inventory.xml`.
+2. a tabular representation.  Files are in `testdata/testcorpus_tabs`.
+3. an RDF representation in TTL format.  Data are in a single file, `testdata/testcorpus.ttl`.
 
 To run the validator, the test archive should first be loaded into the implementation to test using the information from the TextInventory and any one of the three equivalent data sources.
 
