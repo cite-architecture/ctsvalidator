@@ -1,0 +1,6 @@
+namespace#tei#http://www.tei-c.org/ns/1.0#
+urn:cts:greekLit:tlg0013.tlg011.chs01:1#1##2#/tei:TEI/tei:text/tei:body#<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="1">Παλλάδ' Ἀθηναίην ἐρυσίπτολιν ἄρχομ' ἀείδειν</l>#/tei:TEI/tei:text/tei:body/tei:l[@n = '?']
+urn:cts:greekLit:tlg0013.tlg011.chs01:2#2#1#3#/tei:TEI/tei:text/tei:body#<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="2">δεινήν, ᾗ σὺν Ἄρηϊ μέλει πολεμήϊα ἔργα</l>#/tei:TEI/tei:text/tei:body/tei:l[@n = '?']
+urn:cts:greekLit:tlg0013.tlg011.chs01:3#3#2#4#/tei:TEI/tei:text/tei:body#<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="3">περθόμεναί τε πόληες ἀϋτή τε πτόλεμοί τε,</l>#/tei:TEI/tei:text/tei:body/tei:l[@n = '?']
+urn:cts:greekLit:tlg0013.tlg011.chs01:4#4#3#5#/tei:TEI/tei:text/tei:body#<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="4">καί τ' ἐρρύσατο λαὸν ἰόντα τε νισόμενόν τε.</l>#/tei:TEI/tei:text/tei:body/tei:l[@n = '?']
+urn:cts:greekLit:tlg0013.tlg011.chs01:5#5#4#6#/tei:TEI/tei:text/tei:body#<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="5">Χαῖρε θεά, δὸς δ' ἄμμι τύχην εὐδαιμονίην τε.</l>#/tei:TEI/tei:text/tei:body/tei:l[@n = '?']
