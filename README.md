@@ -4,9 +4,9 @@ A test suite and accompanying `gradle` build to validate compliance of CTS insta
 
 The test suite includes an archive of texts in three different formats for loading into a CTS instance, together with a CTS TextInventory identifying the texgts.  The three formats are equivalent under the OHCO2 model of texts:
 
-- an archival text format.  Examples include namespaced XML, non-namespaced XML, and markown.
-- a tabular representation
-- an RDF representation in TTL format
+- an archival text format.  Examples include both namespaced XML, and non-namespaced XML.  Files are in `testdata/testcorpus_texts`, with accompanying text inventory in `testdata/inventory.xml`.
+- a tabular representation.  Files are in `testdata/testcorpus_tabs`.
+- an RDF representation in TTL format.  Data are in a single file, `testdata/testcorpus.ttl`.
 
 To run the validator, the test archive should first be loaded into the implementation to test using the information from the TextInventory and any one of the three equivalent data sources.
 
@@ -21,12 +21,6 @@ Run
 
     gradle  jettyRunWar
 
-Point your browser at <http://localhost:8080/ctsvalidator> to suplly the URL of the running CTS implementation you want to test.
+Point your browser at <http://localhost:8080/ctsvalidator> to supply the URL of the running CTS implementation you want to test.
 
-## Running the test suite automatically ##
-
-TBA.  (Not yet implemented.)
-Run
-
-    gradle -Ptesturl=BASEURL jettyRunWar
  
