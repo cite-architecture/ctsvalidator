@@ -340,7 +340,7 @@
 
 
      <!-- GetPassage -->
-<!--
+
      <test
           id="5-01">
           <description>Request with invalid URN syntax: error code matches.</description>
@@ -394,15 +394,15 @@
           <urn>urn:cts:latinLit:stoa0115.stoa002:1.1.1</urn>
           <otherparams/>
      </test>
-
+<!-- Can't test with this inventory.  Two possible replies!
      <test
           id="5-08">
-          <description>Request on node of valid notional work with UTF-8 characters outside ASCII
+          <description>Request on node with UTF-8 characters outside ASCII
                range: reply element matches.</description>
           <request>GetPassage</request>
-          <urn>urn:cts:greekLit:tlg0013.tlg011:1</urn>
+          <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:1</urn>
           <otherparams/>
-     </test>
+     </test>-->
      <test
           id="5-09">
           <description>Request on node of specific version of work: reply element matches.</description>
@@ -447,27 +447,30 @@
           <otherparams/>
      </test>
 
--->
+
 
 <!-- TESTS WITH OPTIONAL context PARAMETER -->
-<!--
+
      <test
           id="5-15">
           <description>Request for node of notional work with optional context parameter: reply
                element matches.</description>
           <request>GetPassage</request>
-          <urn>urn:cts:greekLit:tlg0013.tlg011:3</urn>
+          <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:3</urn>
           <otherparams>context=1</otherparams>
      </test>
+     
+     <!-- Should context=0 be legal?
      <test
           id="5-16">
           <description>Request for node of notional work with optional context parameter: reply
                element matches.</description>
           <request>GetPassage</request>
-          <urn>urn:cts:greekLit:tlg0013.tlg011:3</urn>
+          <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:3</urn>
           <otherparams>context=0</otherparams>
      </test>
--->
+     -->
+
 
 
 

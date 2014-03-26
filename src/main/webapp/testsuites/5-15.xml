@@ -1,11 +1,17 @@
-<GetPassage>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../rng/GetPassage.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<cts:GetPassage
+    xmlns="http://chs.harvard.edu/xmlns/cts"
+    xmlns:cts="http://chs.harvard.edu/xmlns/cts">
     <request>
         <requestName>GetPassage</requestName>
-        <requestUrn>urn:cts:greekLit:tlg0013.tlg011:3</requestUrn>
+        <requestUrn>urn:cts:greekLit:tlg0013.tlg011.chs01:3</requestUrn>
         <requestContext>1</requestContext>
     </request>
     <reply>
-        <TEI>
+        <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:3</urn>
+        
+     <passage>   <TEI>
             <text>
                 <body>
                     <l
@@ -17,5 +23,5 @@
                 </body>
             </text>
         </TEI>
-    </reply>
-</GetPassage>
+   </passage> </reply>
+</cts:GetPassage>
