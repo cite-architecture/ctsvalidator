@@ -210,7 +210,7 @@
       xml:lang="grc">
       <title
         xml:lang="eng">Iliad</title>
-      <!--
+      
       <edition
         urn="urn:cts:greekLit:tlg0012.tlg001.oct">
         <label
@@ -254,7 +254,7 @@
             </citation>
           </citationMapping>
         </online>
-      </edition> -->
+      </edition> 
     </work>
   </textgroup>
 </TextInventory>
