@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../rng/GetPassagePlus.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <cts:GetPassagePlus
-	xmlns="http://chs.harvard.edu/xmlns/cts3"
-	xmlns:cts="http://chs.harvard.edu/xmlns/cts3"
+	xmlns="http://chs.harvard.edu/xmlns/cts"
+	xmlns:cts="http://chs.harvard.edu/xmlns/cts"
 	>
 	<request>
 		<requestName>GetPassagePlus</requestName>
 		<requestUrn>urn:cts:latinLit:stoa0115.stoa002:1</requestUrn>
 	</request>
 	<cts:reply xmlns:tei="http://www.tei-c.org/ns/1.0">
+		<urn>urn:cts:latinLit:stoa0115.stoa002.stoa01:1</urn>
 		<passage>
 			<tei:TEI>
 				<tei:text>
@@ -162,4 +164,5 @@
 			</next>
 		</prevnext>
 	</cts:reply>
+	<label></label>
 </cts:GetPassagePlus>

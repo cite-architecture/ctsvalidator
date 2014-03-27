@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../rng/GetPassagePlus.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <cts:GetPassagePlus
-	xmlns="http://chs.harvard.edu/xmlns/cts3"
-	xmlns:cts="http://chs.harvard.edu/xmlns/cts3">
+	xmlns="http://chs.harvard.edu/xmlns/cts"
+	xmlns:cts="http://chs.harvard.edu/xmlns/cts">
 	<request>
 		<requestName>GetPassagePlus</requestName>
 		<requestUrn>urn:cts:greekLit:tlg0013.tlg011.chs01:1-4</requestUrn>
 	</request>
 	<cts:reply
 		xmlns:tei="http://www.tei-c.org/ns/1.0">
+		<urn>urn:cts:greekLit:tlg0013.tlg011.chs01:1-4</urn>
 		<passage>
 			<tei:TEI>
 				<tei:text>
@@ -44,10 +46,11 @@
 			</tei:TEI>
 		</passage>
 		<prevnext>
-			<prev/>
+			<prev><urn/></prev>
 			<next>
 				<urn>urn:cts:greekLit:tlg0013.tlg011.chs01:5</urn>
 			</next>
 		</prevnext>
 	</cts:reply>
+	<label></label>
 </cts:GetPassagePlus>
