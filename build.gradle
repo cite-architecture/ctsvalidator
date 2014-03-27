@@ -8,6 +8,10 @@ apply from: "versions.gradle"
 
 repositories {
     mavenCentral()
+    // for IBM Normalizer
+    maven {
+        url "https://oss.sonatype.org/content/repositories/releases"
+    }
     maven {
         url "http://beta.hpcc.uh.edu/nexus/content/groups/public"
     }
@@ -18,6 +22,9 @@ dependencies {
   compile group: 'edu.harvard.chs', name : 'greekutils' , version: greekutilsversion
 
   runtime group: 'org.codehaus.groovy', name: 'groovy-all', version: groovyversion
+  runtime group :'xmlunit', name: 'xmlunit', version: xmlunitVersion
   runtime group: 'edu.harvard.chs', name : 'greekutils' , version: greekutilsversion
+  runtime group: 'com.ibm.icu', name: 'icu4j', version: icu4jVersion
+
 }
 
