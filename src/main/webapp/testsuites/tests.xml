@@ -619,7 +619,8 @@ Add further GP requests with optional context parameter:
      </test>
 -->
      <!--
-* Invalid URN:  range begin node follows range end node
+* Invalid URN:  ran
+ge begin node follows range end node
 
 
 Add further GPP requests with optional context parameter
@@ -632,20 +633,5 @@ Use cases parallel to both GetPassage and GetValidReff boundary tests
 <otherparams>context=1</otherparams>
 </test>
 -->
-<!-- Implement prev/next N Urns
-     <test
-          id="7-01">
-          <description>GetPNUrns.</description>
-          <request>GetPrevNUrns</request>
-          <urn>urn:cts:greekLit:tlg0013.tlg011:1</urn>
-          <otherparams>n=1</otherparams>
-     </test>
-     <test
-          id="8-01">
-          <description>GetNNUrns.</description>
-          <request>GetNextNUrns</request>
-          <urn>urn:cts:greekLit:tlg0013.tlg011:1</urn>
-          <otherparams>n=1</otherparams>
-     </test>
--->
+     
 </testsuite>
