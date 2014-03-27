@@ -1,4 +1,4 @@
 
 ext {
-    ctsVersion = "5.0.rc.1"
+    ctsVersion = "5.0.rc.2"
 }
