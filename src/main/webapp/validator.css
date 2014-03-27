@@ -70,11 +70,8 @@ table	{ width: 100%;
 td {
     	font: small "Lucida Grande" "Arial Unicode MS", sans-serif;
 }
-/* The following IDs are expected to skin a standard CHS site:
-	head, menu and footer.
-   In addition, chs_logo_noText.png can be set to a literal URL or
-   replaced during an ant build to define a logo to include in the header.
- */
+
+
 #header {
 		font: 150% "Lucida Grande" "Arial Unicode MS", sans-serif;
 		/*background: transparent url(chs_logo_noText.png) no-repeat 0px 0px;*/
@@ -125,8 +122,11 @@ td {
 table { width : 100%; }
 .rowlabel { width : 25%; }
 
+tr:nth-child(odd) {
+background-color: #ddd;
+    }
+}
 
-
-.fail { color : red; }
-.ok { color : green;}
-.caution{ color : yellow}
+td.fail { color : red; }
+td.ok { color : green;}
+td.caution{ color : yellow}
