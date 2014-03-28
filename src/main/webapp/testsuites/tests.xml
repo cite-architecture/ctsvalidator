@@ -20,7 +20,7 @@
           <description>Request with invalid URN syntax: error code matches</description>
           <request>GetValidReff</request>
           <urn>BADSYNTAX</urn>
-          <otherparams/>
+          <otherparams>level=1</otherparams>
      </test>
 
 
@@ -29,7 +29,7 @@
           <description>Request missing URN parameter: error code matches.</description>
           <request>GetValidReff</request>
           <urn/>
-          <otherparams/>
+          <otherparams>level=1</otherparams>
      </test>
   
      <test
@@ -37,7 +37,7 @@
           <description>Request on invalid work reference: error code matches.</description>
           <request>GetValidReff</request>
           <urn>urn:cts:greekLit:NONEXISTENTWORK</urn>
-          <otherparams/>
+          <otherparams>level=1</otherparams>
      </test>
 
      <test
@@ -45,14 +45,14 @@
           <description>Request on invalid passage reference: error code matches.</description>
           <request>GetValidReff</request>
           <urn>urn:cts:greekLit:tlg0013.tlg011:6</urn>
-          <otherparams/>
+          <otherparams>level=1</otherparams>
      </test>
      <test
           id="3-05">
           <description>Request on invalid passage reference (illegal range): error code matches.</description>
           <request>GetValidReff</request>
           <urn>urn:cts:greekLit:tlg0013.tlg011:5-3</urn>
-          <otherparams/>
+          <otherparams>level=1</otherparams>
      </test>
      <test
           id="3-06">
@@ -60,7 +60,7 @@
                matches.</description>
           <request>GetValidReff</request>
           <urn>urn:cts:latinLit:stoa0115.stoa002:preface.43-1.INVALID</urn>
-          <otherparams/>
+          <otherparams>level=3</otherparams>
      </test>
 
      <test
@@ -68,7 +68,7 @@
           <description>Request on valid notional work: reply element matches.</description>
           <request>GetValidReff</request>
           <urn>urn:cts:greekLit:tlg0013.tlg011</urn>
-          <otherparams/>
+          <otherparams>level=1</otherparams>
      </test>
 
      <test
@@ -76,7 +76,7 @@
           <description>Request on valid version of work: reply element matches.</description>
           <request>GetValidReff</request>
           <urn>urn:cts:greekLit:tlg0013.tlg011.chs01</urn>
-          <otherparams/>
+          <otherparams>level=1</otherparams>
      </test>
 
      <test
@@ -84,7 +84,7 @@
           <description>Request for containing passage reference: reply element matches.</description>
           <request>GetValidReff</request>
           <urn>urn:cts:latinLit:stoa0115.stoa002:preface</urn>
-          <otherparams/>
+          <otherparams>level=2</otherparams>
      </test>
 
 
@@ -102,7 +102,7 @@
                range leaf node): reply element matches.</description>
           <request>GetValidReff</request>
           <urn>urn:cts:latinLit:stoa0115.stoa002:preface.43-1.1.4</urn>
-          <otherparams/>
+          <otherparams>level=3</otherparams>
      </test>
      <test
           id="3-12">
@@ -110,7 +110,7 @@
                leaf node, one end containing): reply element matches.</description>
           <request>GetValidReff</request>
           <urn>urn:cts:latinLit:stoa0115.stoa002:preface.43-1.1</urn>
-          <otherparams/>
+          <otherparams>level=3</otherparams>
      </test>
      <test
           id="3-13">
@@ -118,7 +118,7 @@
                leaf node, one end containing): reply element matches.</description>
           <request>GetValidReff</request>
           <urn>urn:cts:latinLit:stoa0115.stoa002:preface-1.1.2</urn>
-          <otherparams/>
+          <otherparams>level=3</otherparams>
      </test>
      <test
           id="3-14">
@@ -126,7 +126,7 @@
                leaf node, one end containing): reply element matches.</description>
           <request>GetValidReff</request>
           <urn>urn:cts:latinLit:stoa0115.stoa002:preface.43-1.1.2</urn>
-          <otherparams/>
+          <otherparams>level=3</otherparams>
      </test>
      <test
           id="3-15">
@@ -134,7 +134,7 @@
                leaf node, one end containing): reply element matches.</description>
           <request>GetValidReff</request>
           <urn>urn:cts:latinLit:stoa0115.stoa002:preface-1.1</urn>
-          <otherparams/>
+          <otherparams>level=3</otherparams>
      </test>
      <test
           id="3-16">
@@ -142,14 +142,14 @@
                containing element: error code matches.</description>
           <request>GetValidReff</request>
           <urn>urn:cts:latinLit:stoa0115.stoa002:1.2.1-1.2</urn>
-          <otherparams/>
+          <otherparams>level=2</otherparams>
      </test>
      <test
           id="3-17">
           <description>Request with invalid passage reference (illegal range): error code matches.</description>
           <request>GetValidReff</request>
           <urn>urn:cts:greekLit:tlg0013.tlg011:4-2</urn>
-          <otherparams/>
+          <otherparams>level=1</otherparams>
      </test>
      <test
           id="3-18">
@@ -157,7 +157,6 @@
           <request>GetValidReff</request>
           <urn>urn:cts:latinLit:stoa0115.stoa002</urn>
           <otherparams>level=0</otherparams>
-
      </test>
 
      <test
