@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../rng/GetValidReff.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<cts:GetValidReff xmlns:cts="http://chs.harvard.edu/xmlns/cts" 
+<GetValidReff xmlns:cts="http://chs.harvard.edu/xmlns/cts" 
 	   xmlns="http://chs.harvard.edu/xmlns/cts">
 
 <request>
 <requestName>GetValidReff</requestName>
 <requestUrn>urn:cts:latinLit:stoa0115.stoa002:preface.43-1.1.2</requestUrn>
+    <level>3</level>
 </request>
 
 <reply>
@@ -18,4 +19,4 @@
 <urn>urn:cts:latinLit:stoa0115.stoa002.stoa01:1.1.2</urn>
 </reff>
 </reply>
-</cts:GetValidReff>
+</GetValidReff>

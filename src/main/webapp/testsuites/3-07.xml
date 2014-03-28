@@ -4,6 +4,7 @@
 <request>
 <requestName>GetValidReff</requestName>
 <requestUrn>urn:cts:greekLit:tlg0013.tlg011</requestUrn>
+<level>1</level>
 </request>
 <reply>
 <reff>
