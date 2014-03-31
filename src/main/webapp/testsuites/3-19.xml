@@ -4,7 +4,7 @@
 	   xmlns="http://chs.harvard.edu/xmlns/cts">
 
 <message>
-With null passage reference, invalid value for level parameter: 2 with urn urn:cts:greekLit:tlg0013.tlg011
+Invalid value for level parameter: 2. With urn urn:cts:greekLit:tlg0013.tlg011 maximum level = 1.
 </message>
 <code>4</code>
 </CTSError>
