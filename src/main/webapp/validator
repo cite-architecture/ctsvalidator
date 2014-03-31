@@ -43,9 +43,7 @@ import org.custommonkey.xmlunit.*
 
 import edu.harvard.chs.f1k.GreekNode
 
-def versionInfo ="version designed for CTS specification 5.0.rc.1"
-
-
+def versionInfo ="version @ctsvVersion@, designed to test CTS specification @specVersion@"
 
 
 

@@ -1,3 +1,5 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
 apply plugin : 'groovy'
 apply plugin: 'jetty'
 
@@ -28,3 +30,6 @@ dependencies {
 
 }
 
+war {
+  filter(ReplaceTokens, tokens: [ctsvVersion: ctsvVersion, specVersion: specVersion])
+}

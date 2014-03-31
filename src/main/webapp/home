@@ -3,44 +3,29 @@
 // of a CTS installation to test.
 
 
-//def versionInfo ="version of Dec. 27, 2008, using test suite <strong>Beta 1</strong>"
 
 
-
-
-
-def versionInfo ="tests version 5.0.rc.1 of the CTS specification"
+def versionInfo ="version @ctsvVersion@, tests version @specVersion@ of the CTS specification"
 
 
 def validator = "validator"
 
+html.html {
+  head {
+    title("CTS validator: version @ctsvVersion@")
+    link(type: "text/css", rel: "stylesheet", href: "validator.css", title: "validator CSS")
+  }
+  body {
+    p(class: "menu", "CTS validator (${versionInfo})")
+    div(id: "header", "CTS validator") 
+    p("This service tests a CTS installation against a standard CTS test suite.")
 
-
-println """
-<html><head>
-<title>CTS validator</title>
-<link type="text/css" rel="stylesheet" href="validator.css" title="CHS style"/>
-</head>
-<body>
-<p class="menu">CTS validator (${versionInfo})</p>
-<div id="header">
-CTS validator</div>
-<p>This service tests a CTS service
-against a standard CTS test suite.
-</p>
-
-<h2>Test required requests</h2>
-<p>
-Validate CTS at the following
-URL:
-</p>
-
-<form action="validator">
-<input name="url" value="http://localhost:8888/sparqlcts/api" style="width:60%"/>
-<input type="submit" value="Run validator"/>
-</form>
-
-</body>
-</html>
-"""
+    h2("Test compliance with CTS @specVersion@")
+    p("Validate CTS installed at the following URL:")
+    form(action: "validator") {
+      input(name: "url", value: "http://localhost:8888/sparqlcts/api", style: "width:60%")
+      input(type: "submit", value: "Run validator")
+    }
+  }
+}
 
