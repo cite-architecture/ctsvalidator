@@ -67,7 +67,7 @@
           id="3-07">
           <description>Request on valid notional work: reply element matches.</description>
           <request>GetValidReff</request>
-          <urn>urn:cts:greekLit:tlg0013.tlg011</urn>
+          <urn>urn:cts:latinLit:stoa0115.stoa002</urn>
           <otherparams>level=1</otherparams>
      </test>
 
