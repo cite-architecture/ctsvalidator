@@ -1,6 +1,6 @@
 ext {
     groovyversion = "2.0.6"
-    greekutilsversion = "0.8.11"
+    greekutilsversion = "0.8.12"
     xmlunitVersion = "1.3"
     icu4jVersion = "3.4.4"
 

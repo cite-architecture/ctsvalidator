@@ -60,19 +60,36 @@ org.custommonkey.xmlunit.Diff  testDiff(String req, String testFile) {
 
   String actual  = new URL(req).getText("UTF-8")
   actual = Normalizer.normalize(actual, Normalizer.NFC) 
-
   groovy.util.Node root1 = new  XmlParser().parseText(actual)
-  groovy.util.Node actualReplyNode  = root1[ctsns.reply][0]
-  GreekNode actualReply = new GreekNode(actualReplyNode)
+  groovy.util.Node actualGroovyNode
+  switch (root1.name().getLocalPart()) {
+  case "CTSError":
+  actualGroovyNode = root1[ctsns.code][0]
+  break
+
+  default:
+  actualGroovyNode = root1[ctsns.reply][0]
+  break
+  }
+  GreekNode actualReply = new GreekNode(actualGroovyNode)
+
+
 
   String expected = new File(testFile).getText("UTF-8")
   expected = Normalizer.normalize(expected, Normalizer.NFC)
+  groovy.util.Node root2 = new  XmlParser().parseText(expected)
+  groovy.util.Node expectedGroovyNode
 
-  groovy.util.Node root2 = new  XmlParser().parseText(actual)
-  groovy.util.Node expectedReplyNode  = root2[ctsns.reply][0]
-  GreekNode expectedReply = new GreekNode(expectedReplyNode)
+  switch (root2.name().getLocalPart()) {
+  case "CTSError":
+  expectedGroovyNode = root2[ctsns.code][0]
+  break
 
-
+  default:
+  expectedGroovyNode = root2[ctsns.reply][0]
+  break
+  }
+  GreekNode expectedReply = new GreekNode(expectedGroovyNode)
 
   // Explicitly set of these before XML-based comparison:
   XMLUnit.setIgnoreWhitespace(true)
