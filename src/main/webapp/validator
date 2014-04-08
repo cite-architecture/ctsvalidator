@@ -40,7 +40,6 @@ import com.ibm.icu.text.Normalizer
 // Use XML Unit for XML comparisons
 import org.custommonkey.xmlunit.*
 
-
 import edu.harvard.chs.f1k.GreekNode
 
 def versionInfo ="version @ctsvVersion@, designed to test CTS specification @specVersion@"
@@ -55,22 +54,32 @@ def versionInfo ="version @ctsvVersion@, designed to test CTS specification @spe
  * @param req URL String of request to test.
  */
 org.custommonkey.xmlunit.Diff  testDiff(String req, String testFile) {
-  def actual  = new URL(req).getText("UTF-8")
-  actual = Normalizer.normalize(actual, Normalizer.NFC) 
+
   groovy.xml.Namespace ctsns = new groovy.xml.Namespace("http://chs.harvard.edu/xmlns/cts")
 
 
-  def root1 = new  XmlParser().parseText(actual)
+  String actual  = new URL(req).getText("UTF-8")
+  actual = Normalizer.normalize(actual, Normalizer.NFC) 
+
+  groovy.util.Node root1 = new  XmlParser().parseText(actual)
   groovy.util.Node actualReplyNode  = root1[ctsns.reply][0]
-  def expected = new File(testFile).getText("UTF-8")
+  GreekNode actualReply = new GreekNode(actualReplyNode)
+
+  String expected = new File(testFile).getText("UTF-8")
   expected = Normalizer.normalize(expected, Normalizer.NFC)
 
-  // Explicitly set both of these before XML-based comparison:
+  groovy.util.Node root2 = new  XmlParser().parseText(actual)
+  groovy.util.Node expectedReplyNode  = root2[ctsns.reply][0]
+  GreekNode expectedReply = new GreekNode(expectedReplyNode)
+
+
+
+  // Explicitly set of these before XML-based comparison:
   XMLUnit.setIgnoreWhitespace(true)
   XMLUnit.setNormalizeWhitespace(true)
   XMLUnit.setIgnoreComments(true)
 
-  def xmlDiff = new Diff(expected, actual )
+  def xmlDiff = new Diff(expectedReply.toXml(), actualReply.toXml() )
   return xmlDiff
 }
 
@@ -199,19 +208,6 @@ if (!testFileOK) {
 	    String testFileName = "${testsDir}/${id}.xml"
 	    Diff diffResult = testDiff(req,testFileName)
 
-	    /*
-
-  //println   "<td class='fail'>failed</td><td>"
-    def details = new DetailedDiff(xmlDiff)
-    def allDiffs = details.getAllDifferences()
-    //println   "<ul>"
-    allDiffs.each {
-      //	  println   "<li>${it}</li>"
-    }
-    //println   "</ul>"
-    //println   "</td>"
-}
-*/
 	    tr {
 	      td {
 		a(href: "${req}","${id}")
@@ -261,26 +257,4 @@ if (!testFileOK) {
   }
 }
 
-/*
-
-
-println   "</tr>"
-} // textXml.test.each
-
-println   """<tr><td/><th>Total for <code>${currentReq}</code></th><td>${currentSuccess}/${currentTests}</td></tr>
-
-</table>
-<p>
-
-</p>
-</body>
-</html>
-"""
-
-
-
-
-
-} // all preconditions met
-  */
 
