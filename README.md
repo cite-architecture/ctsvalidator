@@ -23,4 +23,10 @@ Run
 
 Point your browser at <http://localhost:8080/ctsvalidator> to supply the URL of the running CTS implementation you want to test.
 
+This is just the standard `jettyRunWar` gradle task:  you can configure the servlet container any way you like.  To install the servlet in your own container, run
+
+    gradle war
+
+and add the resulting `.war` file to your container.
+
  
