@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../rng/Error.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<cts:CTSError   xmlns:cts="http://chs.harvard.edu/xmlns/cts" 
+<CTSError   xmlns:cts="http://chs.harvard.edu/xmlns/cts" 
 	   xmlns="http://chs.harvard.edu/xmlns/cts">
 
 <message>
 Invalid URN reference: urn:cts:greekLit:NONEXISTENTWORK:3
 </message>
 <code>3</code>
-</cts:CTSError>
+</CTSError>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../rng/GetPrevNextUrn.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<cts:GetPrevNextUrn   xmlns:cts="http://chs.harvard.edu/xmlns/cts" 
+<GetPrevNextUrn   xmlns:cts="http://chs.harvard.edu/xmlns/cts" 
 	   xmlns="http://chs.harvard.edu/xmlns/cts">
 
 <request>
@@ -21,4 +21,4 @@
 </next>
 </prevnext>
 </reply>
-</cts:GetPrevNextUrn>
+</GetPrevNextUrn>
