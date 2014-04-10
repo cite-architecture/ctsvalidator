@@ -40,7 +40,6 @@ import com.ibm.icu.text.Normalizer
 // Use XML Unit for XML comparisons
 import org.custommonkey.xmlunit.*
 
-
 import edu.harvard.chs.f1k.GreekNode
 
 def versionInfo ="version @ctsvVersion@, designed to test CTS specification @specVersion@"
@@ -55,22 +54,49 @@ def versionInfo ="version @ctsvVersion@, designed to test CTS specification @spe
  * @param req URL String of request to test.
  */
 org.custommonkey.xmlunit.Diff  testDiff(String req, String testFile) {
-  def actual  = new URL(req).getText("UTF-8")
-  actual = Normalizer.normalize(actual, Normalizer.NFC) 
+
   groovy.xml.Namespace ctsns = new groovy.xml.Namespace("http://chs.harvard.edu/xmlns/cts")
 
 
-  def root1 = new  XmlParser().parseText(actual)
-  groovy.util.Node actualReplyNode  = root1[ctsns.reply][0]
-  def expected = new File(testFile).getText("UTF-8")
-  expected = Normalizer.normalize(expected, Normalizer.NFC)
+  String actual  = new URL(req).getText("UTF-8")
+  actual = Normalizer.normalize(actual, Normalizer.NFC) 
+  groovy.util.Node root1 = new  XmlParser().parseText(actual)
+  groovy.util.Node actualGroovyNode
+  switch (root1.name().getLocalPart()) {
+  case "CTSError":
+  actualGroovyNode = root1[ctsns.code][0]
+  break
 
-  // Explicitly set both of these before XML-based comparison:
+  default:
+  actualGroovyNode = root1[ctsns.reply][0]
+  break
+  }
+  GreekNode actualReply = new GreekNode(actualGroovyNode)
+
+
+
+  String expected = new File(testFile).getText("UTF-8")
+  expected = Normalizer.normalize(expected, Normalizer.NFC)
+  groovy.util.Node root2 = new  XmlParser().parseText(expected)
+  groovy.util.Node expectedGroovyNode
+
+  switch (root2.name().getLocalPart()) {
+  case "CTSError":
+  expectedGroovyNode = root2[ctsns.code][0]
+  break
+
+  default:
+  expectedGroovyNode = root2[ctsns.reply][0]
+  break
+  }
+  GreekNode expectedReply = new GreekNode(expectedGroovyNode)
+
+  // Explicitly set of these before XML-based comparison:
   XMLUnit.setIgnoreWhitespace(true)
   XMLUnit.setNormalizeWhitespace(true)
   XMLUnit.setIgnoreComments(true)
 
-  def xmlDiff = new Diff(expected, actual )
+  def xmlDiff = new Diff(expectedReply.toXml(), actualReply.toXml() )
   return xmlDiff
 }
 
@@ -151,13 +177,13 @@ if (!testFileOK) {
     body {
 
       p (class: "menu") {
-      mkp.yield "CTS validator (${versionInfo}):  "
-      a(href: "home", "Home")
+	mkp.yield "CTS validator (${versionInfo}):  "
+	a(href: "home", "Home")
       }
       div(id: "header", "CTS Validator: results")
       p {
-      mkp.yield "Site tested: "
-      code ("${url}")
+	mkp.yield "Site tested: "
+	code ("${url}")
       }
       p("Links on test IDs are to the URL used in the test.")
 
@@ -165,121 +191,81 @@ if (!testFileOK) {
 
 
       testData.keySet().each { requestName ->
-      currentRequest = requestName
+	currentRequest = requestName
 
-      h2("${requestName}")
+	h2("${requestName}")
 
+	def currentTests = 0
+	def currentSuccess = 0
 
-      def currentTests = 0
-      def currentSuccess = 0
+	def testList = testData[requestName]
 
-      def testList = testData[requestName]
-
-
-
-      table {
-        tr {
+	table {
+	  tr {
 	    th("Test")
-	        th("Summary of test")
-		    th("Results")
-		        th("Details")
-			  }
-			    testList.each { test ->
-			        String id = test[0]
-				    String urn = test[1]
-				        String params = test[2]
-					    String description = test[3]
+	    th("Summary of test")
+	    th("Results")
+	    th("Details")
+	  }
+	  testList.each { test ->
+	    String id = test[0]
+	    String urn = test[1]
+	    String params = test[2]
+	    String description = test[3]
 
+	    currentTests++;
+	    totalTests++;
 
-					        currentTests++;
-						    totalTests++;
+	    String req = url + "?request=${requestName}&urn=${urn}&${params}"
+	    String testFileName = "${testsDir}/${id}.xml"
+	    Diff diffResult = testDiff(req,testFileName)
 
-
-						        String req = url + "?request=${requestName}&urn=${urn}&${params}"
-							    String testFileName = "${testsDir}/${id}.xml"
-							        Diff diffResult = testDiff(req,testFileName)
-
-								    /*
-
-  //println   "<td class='fail'>failed</td><td>"
-    def details = new DetailedDiff(xmlDiff)
-    def allDiffs = details.getAllDifferences()
-    //println   "<ul>"
-    allDiffs.each {
-      //	    println   "<li>${it}</li>"
-    }
-    //println   "</ul>"
-    //println   "</td>"
-}
-*/
 	    tr {
-	          td {
-		     a(href: "${req}","${id}")
-		           }
-			         td {
-				    mkp.yield "${description} (cf. "
-				    	      a(href: "testsuites/${id}.xml", "expected result")
-					      	      mkp.yield ")"
-						            }
+	      td {
+		a(href: "${req}","${id}")
+	      }
+	      td {
+		mkp.yield "${description} (cf. "
+		a(href: "testsuites/${id}.xml", "expected result")
+		mkp.yield ")"
+	      }
 
-							          if (diffResult.identical()) {
-								     td (class: "ok", "success")
-								     	td("")
-										currentSuccess++;
-											totalSuccess++;
-
-											      } else {
-											      	td(class : "fail", "failed")
-
-													 def details = new DetailedDiff(diffResult)
-													     def allDiffs = details.getAllDifferences()
-													     	 td {
-														      ul {
-														      	     allDiffs.each {
-															     		         li(it)
-																		      }
-																		         }
-																			  }
-																			        }
-																				    }
-																				      }
-
-																				        tr {
-																					    td("")
-																					        th {
-																						      mkp.yield "Total for "
-																						            code("${currentRequest}")
-
-																							        }
-																								    td( "${currentSuccess}/${currentTests}")    
-
-																								        }
-																									}
+	      if (diffResult.identical()) {
+		td (class: "ok", "success")
+		td("")
+		currentSuccess++;
+		totalSuccess++;
+		
+	      } else {
+		td(class : "fail", "failed")
+		
+		def details = new DetailedDiff(diffResult)
+		def allDiffs = details.getAllDifferences()
+		td {
+		  ul {
+		    allDiffs.each {
+		      li(it)
+		    }
+		  }
+		}
+	      }
+	    }
+	  }
+	  
+	  tr {
+	    td("")
+	    th {
+	      mkp.yield "Total for "
+	      code("${currentRequest}")
+	      
+	    }
+	    td( "${currentSuccess}/${currentTests}")    
+	    
+	  }
+	}
       }
       p("Total for all requests: successes/total tests = ${totalSuccess}/${totalTests}")
     }
   }
 }
 
-/*
-
-
-println   "</tr>"
-} // textXml.test.each
-
-println   """<tr><td/><th>Total for <code>${currentReq}</code></th><td>${currentSuccess}/${currentTests}</td></tr>
-
-</table>
-<p>
-
-</p>
-</body>
-</html>
-"""
-
-
-
-
-
-} // all preconditions met
-  */
