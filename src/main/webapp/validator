@@ -89,12 +89,17 @@ org.custommonkey.xmlunit.Diff  testDiff(String req, String testFile) {
   expectedGroovyNode = root2[ctsns.reply][0]
   break
   }
+
   GreekNode expectedReply = new GreekNode(expectedGroovyNode)
 
   // Explicitly set of these before XML-based comparison:
   XMLUnit.setIgnoreWhitespace(true)
   XMLUnit.setNormalizeWhitespace(true)
   XMLUnit.setIgnoreComments(true)
+
+  System.err.println "ACTUAL: " + actualReply.toXml()
+
+  System.err.println "EXPECTED: " + expectedReply.toXml()
 
   def xmlDiff = new Diff(expectedReply.toXml(), actualReply.toXml() )
   return xmlDiff
