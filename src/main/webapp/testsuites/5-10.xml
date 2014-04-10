@@ -10,8 +10,9 @@
 	<cts:reply
 		xmlns:tei="http://www.tei-c.org/ns/1.0">
 		<urn>urn:cts:latinLit:stoa0115.stoa002.stoa01:1.1.1</urn>
-		
-		<passage><tei:TEI>
+				<passage xml:lang="lat">
+
+				  <tei:TEI>
 			<tei:text>
 				<tei:body>
 					<tei:div

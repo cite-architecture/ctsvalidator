@@ -11,8 +11,7 @@
     <cts:reply>
         <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:3</urn>
         
-        <passage>   <cts:reply>
-            <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:3</urn>
+  
             <passage xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="grc-c">
                 <tei:TEI>
                     <tei:text>
@@ -28,7 +27,7 @@
                     </tei:text>
                 </tei:TEI>
             </passage>
-        </cts:reply>
-   </passage> 
+        
+
 </cts:reply>
 </GetPassage>
