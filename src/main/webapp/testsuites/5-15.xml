@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../rng/GetPassage.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<cts:GetPassage
+<GetPassage
     xmlns="http://chs.harvard.edu/xmlns/cts"
     xmlns:cts="http://chs.harvard.edu/xmlns/cts">
     <request>
@@ -24,4 +24,4 @@
             </text>
         </TEI>
    </passage> </reply>
-</cts:GetPassage>
+</GetPassage>

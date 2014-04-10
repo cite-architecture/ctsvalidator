@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../rng/GetPassagePlus.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<cts:GetPassagePlus
+<GetPassagePlus
   xmlns="http://chs.harvard.edu/xmlns/cts"
   xmlns:cts="http://chs.harvard.edu/xmlns/cts"
   xmlns:tei="http://www.tei-c.org/ns/1.0">
@@ -29,4 +29,4 @@
     </prevnext>
   </cts:reply>
   <label></label>
-</cts:GetPassagePlus>
+</GetPassagePlus>
