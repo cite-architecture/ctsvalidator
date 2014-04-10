@@ -11,18 +11,24 @@
     <cts:reply>
         <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:3</urn>
         
-     <passage>   <TEI>
-            <text>
-                <body>
-                    <l
-                        n="2"> δεινήν, ᾗ σὺν Ἄρηϊ μέλει πολεμήϊα ἔργα </l>
-                    <l
-                        n="3">περθόμεναί τε πόληες ἀϋτή τε πτόλεμοί τε,</l>
-                    <l
-                        n="4"> καί τ' ἐρρύσατο λαὸν ἰόντα τε νισόμενόν τε. </l>
-                </body>
-            </text>
-        </TEI>
+        <passage>   <cts:reply>
+            <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:3</urn>
+            <passage xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="grc-c">
+                <tei:TEI>
+                    <tei:text>
+                        <tei:body>
+                            <l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="2">
+                                δεινήν, ᾗ σὺν Ἄρηϊ μέλει πολεμήϊα ἔργα
+                            </l>
+                            <l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="3">περθόμεναί τε πόληες ἀϋτή τε πτόλεμοί τε,</l>
+                            <l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="4">
+                                καί τ' ἐρρύσατο λαὸν ἰόντα τε νισόμενόν τε.
+                            </l>
+                        </tei:body>
+                    </tei:text>
+                </tei:TEI>
+            </passage>
+        </cts:reply>
    </passage> 
 </cts:reply>
 </GetPassage>
