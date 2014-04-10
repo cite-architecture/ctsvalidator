@@ -10,7 +10,12 @@
 	</request>
 	<cts:reply>
 		<urn>urn:cts:greekLit:tlg0013.tlg011.chs01:1</urn>
-		<passage>
+		<label>
+			<groupname>Homeric Hymns</groupname>
+			<title>In Minervam</title>
+			<version>CHS</version>
+		</label>
+		<passage xml:lang="grc-c">
 			<tei:TEI>
 				<tei:text>
 					<tei:body>
@@ -29,5 +34,5 @@
 			</next>
 		</prevnext>
 	</cts:reply>
-	<label></label>
+	<rdfLabel></rdfLabel>
 </GetPassagePlus>
