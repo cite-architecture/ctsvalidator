@@ -204,16 +204,16 @@
     </work>
   </textgroup>
   <textgroup
-    urn="urn:cts:greekLit:tlg0013.tlg0012">
+    urn="urn:cts:greekLit:tlg0012">
     <groupname
       xml:lang="eng">Homer</groupname>
     <work
-      urn="urn:cts:greekLit:tlg0013.tlg0012.tlg001"
+      urn="urn:cts:greekLit:tlg0012.tlg001"
       xml:lang="grc">
       <title
         xml:lang="eng">Iliad</title>
       <edition
-        urn="urn:cts:greekLit:tlg0013.tlg0012.oct">
+        urn="urn:cts:greekLit:tlg0012.tlg001.oct">
         <label
           xml:lang="eng">Allen OCT</label>
         <online
@@ -236,7 +236,7 @@
         </online>
       </edition>
       <edition
-        urn="urn:cts:greekLit:tlg0013.tlg0012.octnons">
+        urn="urn:cts:greekLit:tlg0012.tlg001.octnons">
         <label
           xml:lang="eng">Allen OCT</label>
         <online
