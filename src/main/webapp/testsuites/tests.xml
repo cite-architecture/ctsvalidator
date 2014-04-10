@@ -244,14 +244,16 @@
      </test>
 
 
-     <test
+<!-- Ambiguous request in this data set! -->
+   <!-- 
+       <test
           id="4-07">
           <description>Request for notional work: reply element matches.</description>
           <request>GetPrevNextUrn</request>
           <urn>urn:cts:greekLit:tlg0013.tlg011:3</urn>
           <otherparams/>
      </test>
-  
+-->  
 
      <test
           id="4-08">
@@ -261,7 +263,9 @@
           <otherparams/>
      </test>
      
-    
+
+<!-- Ambiguous request in this data set! -->
+   <!-- 
      <test
           id="4-09">
           <description>Request for initial node of notional work: reply element matches.</description>
@@ -269,6 +273,7 @@
           <urn>urn:cts:greekLit:tlg0013.tlg011:1</urn>
           <otherparams/>
      </test>
+-->
      <test
           id="4-10">
           <description>Request for initial node of specific version of work: reply element matches.</description>
@@ -276,6 +281,7 @@
           <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:1</urn>
           <otherparams/>
      </test>
+<!--
      <test
           id="4-11">
           <description>Request for final node of notional work: reply element matches.</description>
@@ -283,6 +289,7 @@
           <urn>urn:cts:greekLit:tlg0013.tlg011:5</urn>
           <otherparams/>
      </test>
+-->
      <test
           id="4-12">
           <description>Request for final node of specific version of work: reply element matches.</description>
@@ -393,6 +400,7 @@
           <urn>urn:cts:latinLit:stoa0115.stoa002:1.1.1</urn>
           <otherparams/>
      </test>
+
 <!-- Can't test with this inventory.  Two possible replies!
      <test
           id="5-08">
