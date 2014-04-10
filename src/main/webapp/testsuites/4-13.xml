@@ -8,7 +8,7 @@
 <requestUrn>urn:cts:greekLit:tlg0013.tlg011.chs01:2-4</requestUrn>
 </request>
 
-<reply>
+<cts:reply>
 
 <prevnext>
 
@@ -20,5 +20,5 @@
 <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:5</urn>
 </next>
 </prevnext>
-</reply>
+</cts:reply>
 </GetPrevNextUrn>

@@ -7,12 +7,12 @@
 		<requestName>GetPrevNextUrn</requestName>
 		<requestUrn>urn:cts:latinLit:stoa0115.stoa002:preface-1.1</requestUrn>
 	</request>
-	<reply>
+	<cts:reply>
 		<prevnext>
 			<prev><urn/></prev>
 			<next>
 				<urn>urn:cts:latinLit:stoa0115.stoa002.stoa01:2.1</urn>
 			</next>
 		</prevnext>
-	</reply>
+	</cts:reply>
 </GetPrevNextUrn>

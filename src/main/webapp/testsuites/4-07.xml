@@ -7,7 +7,7 @@
         <requestName>GetPrevNextUrn</requestName>
         <requestUrn>urn:cts:greekLit:tlg0013.tlg011:3</requestUrn>
     </request>
-    <reply>
+    <cts:reply>
         <prevnext>
             <prev>
                 <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:2</urn>
@@ -16,5 +16,5 @@
                 <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:4</urn>
             </next>
         </prevnext>
-    </reply>
+    </cts:reply>
 </GetPrevNextUrn>

@@ -9,7 +9,7 @@
     <level>3</level>
 </request>
 
-<reply>
+<cts:reply>
 
 <reff>
 <urn>urn:cts:latinLit:stoa0115.stoa002.stoa01:preface.1</urn>
@@ -74,5 +74,5 @@
 <urn>urn:cts:latinLit:stoa0115.stoa002.stoa01:1.1.15</urn>
 <urn>urn:cts:latinLit:stoa0115.stoa002.stoa01:1.1.16</urn>
 </reff>
-</reply>
+</cts:reply>
 </GetValidReff>

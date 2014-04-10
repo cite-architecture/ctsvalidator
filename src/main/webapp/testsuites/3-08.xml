@@ -6,7 +6,7 @@
 <requestUrn>urn:cts:greekLit:tlg0013.tlg011.chs01</requestUrn>
 <level>1</level>
 </request>
-<reply>
+<cts:reply>
 <reff>
 <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:1</urn>
 <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:2</urn>
@@ -14,5 +14,5 @@
 <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:4</urn>
 <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:5</urn>
 </reff>
-</reply>
+</cts:reply>
 </GetValidReff>
