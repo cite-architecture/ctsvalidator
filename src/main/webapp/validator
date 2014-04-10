@@ -40,6 +40,7 @@ import com.ibm.icu.text.Normalizer
 // Use XML Unit for XML comparisons
 import org.custommonkey.xmlunit.*
 
+
 import edu.harvard.chs.f1k.GreekNode
 
 def versionInfo ="version @ctsvVersion@, designed to test CTS specification @specVersion@"
@@ -54,49 +55,22 @@ def versionInfo ="version @ctsvVersion@, designed to test CTS specification @spe
  * @param req URL String of request to test.
  */
 org.custommonkey.xmlunit.Diff  testDiff(String req, String testFile) {
-
+  def actual  = new URL(req).getText("UTF-8")
+  actual = Normalizer.normalize(actual, Normalizer.NFC) 
   groovy.xml.Namespace ctsns = new groovy.xml.Namespace("http://chs.harvard.edu/xmlns/cts")
 
 
-  String actual  = new URL(req).getText("UTF-8")
-  actual = Normalizer.normalize(actual, Normalizer.NFC) 
-  groovy.util.Node root1 = new  XmlParser().parseText(actual)
-  groovy.util.Node actualGroovyNode
-  switch (root1.name().getLocalPart()) {
-  case "CTSError":
-  actualGroovyNode = root1[ctsns.code][0]
-  break
-
-  default:
-  actualGroovyNode = root1[ctsns.reply][0]
-  break
-  }
-  GreekNode actualReply = new GreekNode(actualGroovyNode)
-
-
-
-  String expected = new File(testFile).getText("UTF-8")
+  def root1 = new  XmlParser().parseText(actual)
+  groovy.util.Node actualReplyNode  = root1[ctsns.reply][0]
+  def expected = new File(testFile).getText("UTF-8")
   expected = Normalizer.normalize(expected, Normalizer.NFC)
-  groovy.util.Node root2 = new  XmlParser().parseText(expected)
-  groovy.util.Node expectedGroovyNode
 
-  switch (root2.name().getLocalPart()) {
-  case "CTSError":
-  expectedGroovyNode = root2[ctsns.code][0]
-  break
-
-  default:
-  expectedGroovyNode = root2[ctsns.reply][0]
-  break
-  }
-  GreekNode expectedReply = new GreekNode(expectedGroovyNode)
-
-  // Explicitly set of these before XML-based comparison:
+  // Explicitly set both of these before XML-based comparison:
   XMLUnit.setIgnoreWhitespace(true)
   XMLUnit.setNormalizeWhitespace(true)
   XMLUnit.setIgnoreComments(true)
 
-  def xmlDiff = new Diff(expectedReply.toXml(), actualReply.toXml() )
+  def xmlDiff = new Diff(expected, actual )
   return xmlDiff
 }
 
@@ -225,6 +199,19 @@ if (!testFileOK) {
 	    String testFileName = "${testsDir}/${id}.xml"
 	    Diff diffResult = testDiff(req,testFileName)
 
+	    /*
+
+  //println   "<td class='fail'>failed</td><td>"
+    def details = new DetailedDiff(xmlDiff)
+    def allDiffs = details.getAllDifferences()
+    //println   "<ul>"
+    allDiffs.each {
+      //	  println   "<li>${it}</li>"
+    }
+    //println   "</ul>"
+    //println   "</td>"
+}
+*/
 	    tr {
 	      td {
 		a(href: "${req}","${id}")
@@ -274,4 +261,26 @@ if (!testFileOK) {
   }
 }
 
+/*
+
+
+println   "</tr>"
+} // textXml.test.each
+
+println   """<tr><td/><th>Total for <code>${currentReq}</code></th><td>${currentSuccess}/${currentTests}</td></tr>
+
+</table>
+<p>
+
+</p>
+</body>
+</html>
+"""
+
+
+
+
+
+} // all preconditions met
+  */
 
