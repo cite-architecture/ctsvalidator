@@ -16,7 +16,8 @@
 			<version>Scaife</version>
 		</label>
 		
-		<passage>
+
+		<passage xml:lang="lat">
 			<tei:TEI>
 				<tei:text>
 					<tei:body>
