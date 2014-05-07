@@ -1,6 +1,6 @@
 urn:cts:demo:demodocs.about.local:1.header,1,,2,'# About CTS #',
 urn:cts:demo:demodocs.about.local:1.1.header,2,1,3,'What is CTS?',
-urn:cts:demo:demodocs.about.local:1.1.1,3,2,4,'CTS stands for *Canonical Text Services*. The CTS protocol defines a series of requests that a CTS installation must recognize, and schemas for validating XML replies to each request.',
+urn:cts:demo:demodocs.about.local:1.1.1,3,2,4,"CTS stands for *Canonical Text Services*. The CTS protocol defines a series of requests that a CTS installation must recognize, and schemas for validating XML replies to each request.",
 urn:cts:demo:demodocs.about.local:1.1.2,4,3,5,'A complete text browsing and reading system can be constructed without any prior knowledge of the contents of a CTS installation using these three CTS requests:',
 urn:cts:demo:demodocs.about.local:1.1.3.1,5,4,6,'-   GetCapabilities',
 urn:cts:demo:demodocs.about.local:1.1.3.2,6,5,7,'-   GetValidReff',
