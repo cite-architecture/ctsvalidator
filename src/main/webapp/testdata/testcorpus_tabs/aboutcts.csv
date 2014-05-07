@@ -4,7 +4,7 @@ urn:cts:demo:demodocs.about.local:1.1.1,3,2,4,"CTS stands for *Canonical Text Se
 urn:cts:demo:demodocs.about.local:1.1.2,4,3,5,'A complete text browsing and reading system can be constructed without any prior knowledge of the contents of a CTS installation using these three CTS requests:',
 urn:cts:demo:demodocs.about.local:1.1.3.1,5,4,6,'-   GetCapabilities',
 urn:cts:demo:demodocs.about.local:1.1.3.2,6,5,7,'-   GetValidReff',
-urn:cts:demo:demodocs.about.local:1.1.3.3,7,6,8',-   GetPassagePlus',
+urn:cts:demo:demodocs.about.local:1.1.3.3,7,6,8,'-   GetPassagePlus',
 urn:cts:demo:demodocs.about.local:1.1.4,8,7,9,'In CTS, all references to texts are expressed with CTS URNs.',
 urn:cts:demo:demodocs.about.local:1.2.header,9,8,10,'## What is CTS URN notation? ##',
 urn:cts:demo:demodocs.about.local:1.2.1,10,9,,'CTS URN notation is a type of Uniform Resource Name, an Internet Engineering Taskforce standard for identifiers with a specified semantics that are persistent and technology-independent. CTS URNs express the OHCO2 semantics of text, a very general structural and functional model of citable text.',
