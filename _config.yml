@@ -1,0 +1,33 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            ctsvalidator
+tagline:          'Test suite for the CTS API'
+description:      'A test suite and accompanying servlet to validate compliance of CTS instances with the CTS API. It currently uses schemas for CTS 5.0.rc.2.'
+baseurl: '/ctsvalidator/'
+
+
+author:
+  name:           'Neel Smith'
+ 
+
+paginate:         5
+
+github:
+  repo:           https://github.com/cite-architecture/ctsvalidator
+
+version:          0.12.0
+
+links:
+  - title: Github project
+    url: https://github.com/cite-architecture/ctsvalidator
+    external: true
+  - title: CITE architecture home page
+    url: http://cite-architecture.github.io/
+    external: true
+   
