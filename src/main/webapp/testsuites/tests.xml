@@ -50,6 +50,28 @@
           
           <otherparams></otherparams>
      </test>
+     
+     <!-- GetFirstUrn -->
+     <test id="4-01">
+          <description>Request for first URN. Version-level.</description>
+          <request>GetFirstUrn</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:</urn>
+          <otherparams/>
+     </test>
+     <test id="4-02">
+          <description>Request for first URN. Work-level.</description>
+          <request>GetFirstUrn</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001:</urn>
+          <otherparams/>
+     </test>
+     <test id="4-03">
+          <description>Request for first URN. Exemplar-level.</description>
+          <request>GetFirstUrn</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:</urn>
+          <otherparams/>
+     </test>
+     
+     
      <!--
      <test
           id="3-01">
@@ -57,7 +79,7 @@
           <request>GetValidReff</request>
           <urn>BADSYNTAX</urn>
           <otherparams>level=1</otherparams>
-     </test>
+     </test> 
 
 
      <test
