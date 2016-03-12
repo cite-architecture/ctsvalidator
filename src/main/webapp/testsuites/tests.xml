@@ -3,6 +3,8 @@
 <testsuite>
      
 
+     <!-- GetCapabilities -->
+  
      <test
           id="1-01">
           <description>Request for service's capabilities: textgroup and work identifiers match.</description>
@@ -10,11 +12,45 @@
           <urn/>
           <otherparams/>
      </test>
+     
+     <!-- GetPrevNextURN --> 
 
+     <test
+          id="2-01">
+          <description>Request for specific version of work: reply element matches.</description>
+          <request>GetPrevNextUrn</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.4</urn>
+          <otherparams/>
+     </test>
 
 
      <!-- GetValidReff -->
+     <test
+          id="3-01">
+          <description>Request for valid refs, level 2: reply element matches.</description>
+          <request>GetValidReff</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:</urn>
+          
+          <otherparams>level=2</otherparams>
+     </test>
+     <test
+          id="3-02">
+          <description>Request for valid refs, level 1: reply element matches.</description>
+          <request>GetValidReff</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:</urn>
+          
+          <otherparams>level=1</otherparams>
+     </test>
 
+     <test
+          id="3-03">
+          <description>Request for valid refs, no level: reply element matches.</description>
+          <request>GetValidReff</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:</urn>
+          
+          <otherparams></otherparams>
+     </test>
+     <!--
      <test
           id="3-01">
           <description>Request with invalid URN syntax: error code matches</description>
@@ -192,10 +228,10 @@
           <urn>urn:cts:latinLit:stoa0115.stoa002:preface.43-1.1</urn>
           <otherparams>level=2</otherparams>
      </test>
-
+-->
 
      <!-- GetPrevNextUrn -->
-     <test
+     <!-- <test
           id="4-01">
           <description>Request with invalid URN syntax: error code matches.</description>
           <request>GetPrevNextUrn</request>
@@ -243,7 +279,8 @@
           <otherparams/>
      </test>
 
-
+-->
+     
 <!-- Ambiguous request in this data set! -->
    <!-- 
        <test
@@ -255,13 +292,13 @@
      </test>
 -->  
 
-     <test
+    <!-- <test
           id="4-08">
           <description>Request for specific version of work: reply element matches.</description>
           <request>GetPrevNextUrn</request>
           <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:3</urn>
           <otherparams/>
-     </test>
+     </test>-->
      
 
 <!-- Ambiguous request in this data set! -->
@@ -274,13 +311,13 @@
           <otherparams/>
      </test>
 -->
-     <test
+     <!--<test
           id="4-10">
           <description>Request for initial node of specific version of work: reply element matches.</description>
           <request>GetPrevNextUrn</request>
           <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:1</urn>
           <otherparams/>
-     </test>
+     </test>-->
 <!--
      <test
           id="4-11">
@@ -290,7 +327,7 @@
           <otherparams/>
      </test>
 -->
-     <test
+    <!-- <test
           id="4-12">
           <description>Request for final node of specific version of work: reply element matches.</description>
           <request>GetPrevNextUrn</request>
@@ -338,7 +375,7 @@
           <request>GetPrevNextUrn</request>
           <urn>urn:cts:latinLit:stoa0115.stoa002:preface-1.1</urn>
           <otherparams/>
-     </test>
+     </test>-->
 
      <!--
 * ranges mixing containing nodes with leaf nodes
@@ -347,7 +384,7 @@
 
      <!-- GetPassage -->
 
-     <test
+    <!-- <test
           id="5-01">
           <description>Request with invalid URN syntax: error code matches.</description>
           <request>GetPassage</request>
@@ -399,7 +436,7 @@
           <request>GetPassage</request>
           <urn>urn:cts:latinLit:stoa0115.stoa002:1.1.1</urn>
           <otherparams/>
-     </test>
+     </test>-->
 
 <!-- Can't test with this inventory.  Two possible replies!
      <test
@@ -410,7 +447,7 @@
           <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:1</urn>
           <otherparams/>
      </test>-->
-     <test
+   <!--  <test
           id="5-09">
           <description>Request on node of specific version of work: reply element matches.</description>
           <request>GetPassage</request>
@@ -452,20 +489,20 @@
           <request>GetPassage</request>
           <urn>urn:cts:latinLit:stoa0115.stoa002:preface.43-1.1.4</urn>
           <otherparams/>
-     </test>
+     </test>-->
 
 
 
 <!-- TESTS WITH OPTIONAL context PARAMETER -->
 
-     <test
+    <!-- <test
           id="5-15">
           <description>Request for node of notional work with optional context parameter: reply
                element matches.</description>
           <request>GetPassage</request>
           <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:3</urn>
           <otherparams>context=1</otherparams>
-     </test>
+     </test>-->
      
      <!-- Should context=0 be legal?
      <test
@@ -496,7 +533,7 @@ Add further GP requests with optional context parameter:
 
      <!-- GetPassagePlus -->
 
-     <test
+     <!--<test
           id="6-01">
           <description>Request with invalid URN syntax: error code matches.</description>
           <request>GetPassagePlus</request>
@@ -549,7 +586,7 @@ Add further GP requests with optional context parameter:
           <request>GetPassagePlus</request>
           <urn>urn:cts:latinLit:stoa0115.stoa002:1.1.1</urn>
           <otherparams/>
-     </test>
+     </test>-->
      <!-- Can't test with this inventory.  Two possible replies!
      <test
           id="6-08">
@@ -560,7 +597,7 @@ Add further GP requests with optional context parameter:
           <otherparams/>
      </test>
      -->
-     <test
+   <!--  <test
           id="6-09">
           <description>Request on node of specific version of work: reply element matches.</description>
           <request>GetPassagePlus</request>
@@ -625,7 +662,7 @@ Add further GP requests with optional context parameter:
           <request>GetPassagePlus</request>
           <urn>urn:cts:greekLit:tlg0013.tlg011.chs01:1-4</urn>
           <otherparams/>
-     </test>
+     </test>-->
 
      <!--
 * Invalid URN:  range begin node follows range end node
