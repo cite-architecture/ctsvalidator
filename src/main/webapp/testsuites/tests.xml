@@ -79,6 +79,27 @@
           <otherparams>context=0</otherparams>
      </test>
      
+     <test id="5-02">
+          <description>Request for GetPassage. Version-level, container, with context=0</description>
+          <request>GetPassage</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1</urn>
+          <otherparams>context=0</otherparams>
+     </test>
+     
+     <test id="5-03">
+          <description>Request for GetPassage. Version-level, range, with context=0</description>
+          <request>GetPassage</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.9-2.2</urn>
+          <otherparams>context=0</otherparams>
+     </test>
+     
+     <test id="5-04">
+          <description>Request for GetPassage. Work-level, container, with context=5</description>
+          <request>GetPassage</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001:2</urn>
+          <otherparams>context=5</otherparams>
+     </test>
+     
      <!-- GetPassagePlus -->
      <test id="6-01">
           <description>Request for GetPassagePlus. Exemplar-level.</description>
