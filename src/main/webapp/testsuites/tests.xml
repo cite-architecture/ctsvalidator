@@ -71,6 +71,33 @@
           <otherparams/>
      </test>
      
+     <!-- GetPassage -->
+     <!--<test id="5-01">
+          <description>Request for GetPassage. Exemplar-level.</description>
+          <request>GetPassage</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1.1.1</urn>
+          <otherparams/>
+     </test>-->
+     
+     <!-- GetPassagePlus -->
+     <test id="6-01">
+          <description>Request for GetPassagePlus. Exemplar-level.</description>
+          <request>GetPassagePlus</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1.1.2</urn>
+          <otherparams/>
+     </test>
+     <test id="6-02">
+          <description>Request for GetPassagePlus. Single node with context=1.</description>
+          <request>GetPassagePlus</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.5</urn>
+          <otherparams>context=1</otherparams>
+     </test>
+     <test id="6-03">
+          <description>Request for GetPassagePlus. Range with context=0.</description>
+          <request>GetPassagePlus</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.4-1.6</urn>
+          <otherparams>context=0</otherparams>
+     </test>
      
      <!--
      <test
