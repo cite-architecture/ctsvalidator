@@ -46,7 +46,7 @@
                 </element>
                 <externalRef href="prevnext.rng"></externalRef>
             </element>
-         <element name="cts:rdfLabel"><text/></element>
+           <!-- <externalRef href="description.rng"></externalRef>-->
         </element>
     </start>
     

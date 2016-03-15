@@ -72,12 +72,12 @@
      </test>
      
      <!-- GetPassage -->
-     <!--<test id="5-01">
-          <description>Request for GetPassage. Exemplar-level.</description>
+     <test id="5-01">
+          <description>Request for GetPassage. Exemplar-level with context=0</description>
           <request>GetPassage</request>
           <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1.1.1</urn>
-          <otherparams/>
-     </test>-->
+          <otherparams>context=0</otherparams>
+     </test>
      
      <!-- GetPassagePlus -->
      <test id="6-01">
