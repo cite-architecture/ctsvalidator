@@ -119,6 +119,38 @@
           <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.4-1.6</urn>
           <otherparams>context=0</otherparams>
      </test>
+     <test id="6-04">
+          <description>Request for GetPassagePlus. Exemplar-level. With Subref</description>
+          <request>GetPassagePlus</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1.1.2@θ[1]</urn>
+          <otherparams/>
+     </test>
+     <test id="6-05">
+          <description>Request for GetPassagePlus. Single node with context=1. With subref</description>
+          <request>GetPassagePlus</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.5@πᾶσι[1]</urn>
+          <otherparams>context=1</otherparams>
+     </test>
+     <test id="6-06">
+          <description>Request for GetPassagePlus. Range with context=0.</description>
+          <request>GetPassagePlus</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.4@δὲ[1]-1.6@ἐρίσαντε[1]</urn>
+          <otherparams>context=0</otherparams>
+     </test>
+     <!-- GetDescription -->
+     <test id="7-01">
+          <description>Request for GetDescription. Version-level, with citation.</description>
+          <request>GetDescription</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.1</urn>
+          <otherparams/>
+     </test>
+     <test id="7-02">
+          <description>Request for GetDescription. Work-level, with citation.</description>
+          <request>GetDescription</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001:1.1</urn>
+          <otherparams/>
+     </test>
+   
      
      <!--
      <test
