@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../rng/Error.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<CTSError xmlns:cts="http://chs.harvard.edu/xmlns/cts" xmlns="http://chs.harvard.edu/xmlns/cts">
+
+    <message>INVALID REQUEST. No text found matching: 'urn:cts:greekLit:tlg0012.tlg002.theOdysseyIsntHere:1.4'.</message>
+<code>3</code>
+</CTSError>

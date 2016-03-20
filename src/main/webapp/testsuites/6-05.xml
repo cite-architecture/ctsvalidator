@@ -4,7 +4,7 @@
 	xmlns:cts="http://chs.harvard.edu/xmlns/cts" xmlns:tei="http://www.tei-c.org/ns/1.0">
 	<request>
 		<requestName>GetPassagePlus</requestName>
-		<requestUrn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.5</requestUrn>
+		<requestUrn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.5@πᾶσι[1]</requestUrn>
 		<requestContext>1</requestContext>
 	</request>
 	<cts:reply>

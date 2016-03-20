@@ -25,6 +25,7 @@
                             <value>GetPrevNextUrn</value>
                             <value>GetDescription</value>
                             <value>GetFirstUrn</value>
+                            <value>IntentionallyBadRequest</value>
                         </choice>
                     </element>
                     <element
