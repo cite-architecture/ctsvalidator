@@ -47,10 +47,17 @@
           <otherparams/>
      </test>
      <test
-          id="2-error3">
+          id="2-error3-01">
           <description>Request for GetPrevNext Urn. Error 3: invalid urn.</description>
           <request>GetPrevNextUrn</request>
           <urn>urn:cts:greekLit:tlg0012.tlg002.theOdysseyIsntHere:1.4</urn>
+          <otherparams/>
+     </test>
+     <test
+          id="2-error3-02">
+          <description>Request for GetPrevNext Urn. Error 3: invalid urn (Version exists but does not have this citation).</description>
+          <request>GetPrevNextUrn</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:25.1</urn>
           <otherparams/>
      </test>
      
@@ -113,11 +120,18 @@
           <otherparams/>
      </test>
      <test
-          id="3-error3">
+          id="3-error3-01">
           <description>Request for valid refs. Error 3: invalid urn.</description>
           <request>GetValidReff</request>
           <urn>urn:cts:greekLit:tlg0012.tlg002.theOdysseyIsntHere:1.4</urn>
           <otherparams/>
+     </test>
+     <test
+          id="3-error3-02">
+          <description>Request for valid refs. Error 3: invalid urn (Version exists but does not have this citation).</description>
+          <request>GetValidReff</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:25.1</urn>
+          <otherparams>level=1</otherparams>
      </test>
      
      <!-- GetFirstUrn -->
@@ -206,10 +220,16 @@
           <otherparams/>
      </test>
      <test
-          id="5-error3">
+          id="5-error3-01">
           <description>Request for GetPassage. Error 3: invalid urn.</description>
           <request>GetPassage</request>
           <urn>urn:cts:greekLit:tlg0012.tlg002.theOdysseyIsntHere:1.4</urn>
+          <otherparams/>
+     </test>
+     <test id="5-error3-02">
+          <description>Request for GetPassage. Error 3: invalid urn (Version exists but does not have this citation).</description>
+          <request>GetPassage</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:25.1</urn>
           <otherparams/>
      </test>
      
@@ -281,10 +301,16 @@
           <otherparams/>
      </test>
      <test
-          id="6-error3">
+          id="6-error3-01">
           <description>Request for GetPassagePlus. Error 3: invalid urn.</description>
           <request>GetPassagePlus</request>
           <urn>urn:cts:greekLit:tlg0012.tlg002.theOdysseyIsntHere:1.4</urn>
+          <otherparams/>
+     </test>
+     <test id="6-error3-02">
+          <description>Request for GetPassagePlus. Error 3: invalid urn (Version exists but does not have this citation).</description>
+          <request>GetPassagePlus</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:25.1</urn>
           <otherparams/>
      </test>
      
