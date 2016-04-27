@@ -30,6 +30,14 @@ dependencies {
 
 }
 
+jettyRun {
+	    httpPort = 9000
+}
+
+jettyRunWar {
+	    httpPort = 9000
+}
+
 war {
   filter(ReplaceTokens, tokens: [ctsvVersion: ctsvVersion, specVersion: specVersion])
 }

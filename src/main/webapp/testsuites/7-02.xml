@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../rng/GetDescription.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<GetDescription xmlns="http://chs.harvard.edu/xmlns/cts"
+	xmlns:cts="http://chs.harvard.edu/xmlns/cts" xmlns:tei="http://www.tei-c.org/ns/1.0">
+	<request>
+		<requestName>GetDescription</requestName>
+		<requestUrn>urn:cts:greekLit:tlg0012.tlg001:1.1</requestUrn>
+	</request>
+	<cts:reply>
+		<urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.1</urn>
+		<label>Homeric Epic, Iliad (Allen's Iliad (test ed.)): 1.1 (urn:cts:greekLit:tlg0012.tlg001.testAllen:1.1)</label>
+
+		
+	</cts:reply>
+	
+</GetDescription>

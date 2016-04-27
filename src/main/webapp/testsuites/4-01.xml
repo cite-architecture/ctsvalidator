@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../rng/Error.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<CTSError  xmlns:cts="http://chs.harvard.edu/xmlns/cts" 
-	   xmlns="http://chs.harvard.edu/xmlns/cts">
-<message>BAD URN SYNTAX: BADSYNTAX</message>
-<code>2</code>
-</CTSError>
+<?xml-model href="../rng/GetPrevNextUrn.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<GetFirstUrn xmlns:cts="http://chs.harvard.edu/xmlns/cts" xmlns="http://chs.harvard.edu/xmlns/cts">
+
+  <request>
+    <requestName>GetFirstUrn</requestName>
+    <requestUrn>urn:cts:greekLit:tlg0012.tlg001.testAllen:</requestUrn>
+  </request>
+
+  <cts:reply>
+    <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.1</urn>
+  </cts:reply>
+</GetFirstUrn>

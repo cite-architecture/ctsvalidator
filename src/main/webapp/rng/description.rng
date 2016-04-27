@@ -4,7 +4,9 @@
     xmlns="http://relaxng.org/ns/structure/1.0"
     xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
     xmlns:cts="http://chs.harvard.edu/xmlns/cts">
+    
     <start>
+        
         <choice>
             <element
                 name="cts:label">

@@ -1,10 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../rng/Error.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<CTSError    xmlns:cts="http://chs.harvard.edu/xmlns/cts" 
-	   xmlns="http://chs.harvard.edu/xmlns/cts">
+<?xml-model href="../rng/GetPassagePlus.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<GetPassagePlus xmlns="http://chs.harvard.edu/xmlns/cts"
+	xmlns:cts="http://chs.harvard.edu/xmlns/cts" xmlns:tei="http://www.tei-c.org/ns/1.0">
+	<request>
+		<requestName>GetPassagePlus</requestName>
+		<requestUrn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.5</requestUrn>
+		<requestContext>0</requestContext>
+	</request>
+	<cts:reply>
+		<urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.4-1.6</urn>
 
-<message>
-Invalid URN reference: urn:cts:greekLit:NONEXISTENTWORK:3
-</message>
-<code>3</code>
-</CTSError>
+		<label>Range request: 1.4-1.6, from Allen's Iliad (test ed.). (urn:cts:greekLit:tlg0012.tlg001.testAllen:1.4-1.6).</label>
+
+
+		<passage xml:lang="grc">
+			<tei:TEI><tei:text><tei:body><tei:div n="1">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts"
+								urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.4"><l
+									xmlns="http://www.tei-c.org/ns/1.0"
+									xmlns:tei="http://www.tei-c.org/ns/1.0" n="4">ἡρώων, αὐτοὺς δὲ
+									ἑλώρια τεῦχε κύνεσσιν </l></cts:node>
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts"
+								urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.5"><l
+									xmlns="http://www.tei-c.org/ns/1.0"
+									xmlns:tei="http://www.tei-c.org/ns/1.0" n="5">οἰωνοῖσί τε πᾶσι,
+									Διὸς δ᾽ ἐτελείετο βουλή, </l></cts:node>
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts"
+								urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.6"><l
+									xmlns="http://www.tei-c.org/ns/1.0"
+									xmlns:tei="http://www.tei-c.org/ns/1.0" n="6">ἐξ οὗ δὴ τὰ πρῶτα
+									διαστήτην ἐρίσαντε </l></cts:node>
+						</tei:div></tei:body></tei:text></tei:TEI>
+		</passage>
+		<prevnext>
+			<prev>
+				<urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.1-1.3</urn>
+			</prev>
+			<next>
+				<urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.7-1.9</urn>
+			</next>
+		</prevnext>
+	</cts:reply>
+	
+</GetPassagePlus>

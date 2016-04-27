@@ -4,262 +4,83 @@
   <request></request>
   <cts:reply>
     <TextInventory
+      tiid="hmt"
       tiversion="5.0.rc.1"
       xmlns="http://chs.harvard.edu/xmlns/cts"
-      xmlns:dc="http://purl.org/dc/elements/1.1">
+      xmlns:dc="http://purl.org/dc/elements/1.1/">
       <ctsnamespace
         abbr="greekLit"
-        ns="http://chs.harvard.edu/ctsns/greekLit"/>
+        ns="http://chs.harvard.edu/ctsns/greekLit">
+        <description
+          xml:lang="eng"> The &quot;First Thousand Years of Greek&quot; project's inventory of Greek
+          texts. </description>
+      </ctsnamespace>
+      
+      
       <ctsnamespace
-        abbr="latinLit"
-        ns="http://www.stoa.org/ctsns/latinLit"/>
-      <ctsnamespace
-        abbr="demo"
-        ns="http://example.org/demo"/>
+        abbr="test1"
+        ns="http://dev/null">
+        <description
+          xml:lang="eng"> Namespace for made up test works.</description>
+      </ctsnamespace>
       
       
-      
-      <textgroup
-        urn="urn:cts:latinLit:stoa0115">
-        <groupname
-          xml:lang="eng">Erasmus</groupname>
-        <work
-          urn="urn:cts:latinLit:stoa0115.stoa002"
-          xml:lang="lat">
-          <title
-            xml:lang="lat">Colloquia Familiaria</title>
-          <edition
-            urn="urn:cts:latinLit:stoa0115.stoa002.stoa01">
-            <label
-              xml:lang="eng">Scaife</label>
-            <online
-              docname="colloquia/erasmus.xml">
-              <namespaceMapping
-                abbreviation="tei"
-                nsURI="http://www.tei-c.org/ns/1.0"/>
-              <citationMapping>
-                <!-- Preface: citation by p -->
-                <citation
-                  label="section"
-                  scope="/tei:TEI/tei:text/tei:body"
-                  xpath="/tei:div[@type='preface' and @n='?']">
-                  <citation
-                    label="paragraph"
-                    scope="/tei:TEI/tei:text/tei:body/tei:div[@type='preface' and @n='?']"
-                    xpath="/tei:p[@n = '?']"/>
-                </citation>
-                <!-- Coll. 1: citation by p within topic -->
-                <citation
-                  label="colloquium"
-                  scope="/tei:TEI/tei:text/tei:body"
-                  xpath="/tei:div[@type='colloquium' and @n='?']">
-                  <citation
-                    label="topic"
-                    scope="/tei:TEI/tei:text/tei:body/tei:div[@type='colloquium' and @n='?']"
-                    xpath="/tei:div[@type = 'topic' and @n = '?']">
-                    <citation
-                      label="paragraph"
-                      scope="/tei:TEI/tei:text/tei:body/tei:div[@type='colloquium' and @n='?']/tei:div[@type = 'topic' and @n = '?']"
-                      xpath="/tei:p[@n = '?']"/>
-                  </citation>
-                </citation>
-                <!-- Coll. 2:  citation by sp within topic -->
-                <citation
-                  label="colloquium"
-                  scope="/tei:TEI/tei:text/tei:body"
-                  xpath="/tei:div[@type='colloquium' and @n='?']">
-                  <citation
-                    label="topic"
-                    scope="/tei:TEI/tei:text/tei:body/tei:div[@type='colloquium' and @n='?']"
-                    xpath="/tei:div[@type = 'topic' and @n = '?']">
-                    <citation
-                      label="speech"
-                      scope="/tei:TEI/tei:text/tei:body/tei:div[@type='colloquium' and @n='?']/tei:div[@type = 'topic' and @n = '?']"
-                      xpath="/tei:sp[@n = '?']"/>
-                  </citation>
-                </citation>
-              </citationMapping>
-            </online>
+      <textgroup urn="urn:cts:greekLit:tlg0012:">
+        <groupname xml:lang="eng">Homeric Epic</groupname>
+        <work urn="urn:cts:greekLit:tlg0012.tlg001:" xml:lang="grc">
+          <title xml:lang="eng">Iliad</title>
+          <edition urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:">
+            <label xml:lang="eng">Allen's Iliad (test ed.)</label>
+            <description xml:lang="eng">Allen. Iliad. Greek. 3 books of 10 lines.</description>
+            <online/>
+            <exemplar urn="urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:">
+              <label xml:lang="eng">Allen. Iliad. Greek. 3 books of 10 lines. Word-tokens wrapped and citable.</label>
+            </exemplar>
           </edition>
         </work>
       </textgroup>
-      <textgroup
-        urn="urn:cts:demo:demodocs">
-        <groupname
-          xml:lang="eng">Test and demo documents</groupname>
-        <work
-          urn="urn:cts:demo:demodocs.mixedpoem"
-          xml:lang="eng">
-          <title
-            xml:lang="eng">Poem with preface</title>
-          <edition
-            urn="urn:cts:demo:demodocs.mixedpoem.local01">
-            <label
-              xml:lang="eng">Demo</label>
-            <online
-              docname="testmultitier.xml">
+      
+      <textgroup urn="urn:cts:greekLit:tlg0016:">
+        <groupname xml:lang="eng">Herodotus</groupname>
+        <work urn="urn:cts:greekLit:tlg0016.tlg001:" xml:lang="grc">
+          <title xml:lang="eng">Histories</title>
+          <edition urn="urn:cts:greekLit:tlg0016.tlg001.grcTest:">
+            <label xml:lang="eng">Greek. For testing</label>
+            <description xml:lang="eng">3 books, 10 sections.</description>
+            <online/>
+            <exemplar urn="urn:cts:greekLit:tlg0016.tlg001.grcTest.wt:">
+              <label xml:lang="eng">Greek. Tokenized. For testing</label>
+              <description xml:lang="eng">Greek. 3 books, 10 sections each. Words wrapped and citahle.</description>
+              <online/>
               
-              <namespaceMapping
-                abbreviation="tei"
-                nsURI="http://www.tei-c.org/ns/1.0"/>
-              <citationMapping>
-                <citation
-                  label="part"
-                  scope="/TEI/text/body"
-                  xpath="/div[@type = 'preface' and @n = '?']">
-                  <citation
-                    label="paragraph"
-                    scope="/TEI/text/body/div[@type = 'preface' and @n = '?']"
-                    xpath="/p[@n = '?']"/>
-                </citation>
-                <citation
-                  label="book"
-                  scope="/TEI/text/body"
-                  xpath="/div[@type = 'book' and @n = '?']">
-                  <citation
-                    label="line"
-                    scope="/TEI/text/body/div[@type = 'book' and @n='?']"
-                    xpath="/l[@n = '?']"/>
-                </citation>
-                <!-- Add this case for full test -->
-                <!--
-            <citation label="appendices" xpath="/div[@type = 'appendices' and @n = '?']"
-              scope="/TEI/text/body">
-              <citation label="appendix" xpath="/div[@type = 'appendix' and @n = '?']"
-                scope="/TEI/text/body/div[@type = 'appendices' and @n = '?']">
-                <citation label="paragraph" xpath="/p[@n = '?']"
-                  scope="/TEI/text/body/div[@type = 'preface' and @n = '?']"/>
-              </citation> 
-              </citation>-->
-              </citationMapping>
-            </online>
+            </exemplar>
           </edition>
-        </work>
-      </textgroup>
-      <textgroup
-        urn="urn:cts:greekLit:tlg0013">
-        <groupname
-          xml:lang="eng">Homeric Hymns</groupname>
-        <groupname
-          xml:lang="lat">Hymni Homerici</groupname>
-        <work
-          urn="urn:cts:greekLit:tlg0013.tlg011"
-          xml:lang="grc-c">
-          <title
-            xml:lang="lat">In Minervam</title>
-          <title
-            xml:lang="eng">Hymn to Athena</title>
+          <edition urn="urn:cts:greekLit:tlg0016.tlg001.grcTokFull:">
+            <label xml:lang="eng">Greek. Full text tokenized.</label>
+            <description xml:lang="eng">Full Hdt., each word wrapped and citable, to stress the system.</description>
+            <online/>
+            
+          </edition>
           
-          <edition
-            urn="urn:cts:greekLit:tlg0013.tlg011.chs01">
-            <label
-              xml:lang="eng">CHS</label>
-            <online
-              docname="tlg0013/tlg0013.tlg011.chs01.xml">
+          <translation urn="urn:cts:greekLit:tlg0016.tlg001.engTest:" xml:lang="eng">
+            <label xml:lang="eng">Hdt. English for Testing</label>
+            <description xml:lang="eng">3 books. 10 sections. For testing.</description>
+            <online/>
+            <exemplar urn="urn:cts:greekLit:tlg0016.tlg001.engTest.wt:">
+              <label xml:lang="eng">Greek. Tokenized. For testing</label>
+              <description xml:lang="eng">Greek. 3 books, 10 sections each. Words wrapped and citable.</description>
+              <online/>
               
-              <namespaceMapping
-                abbreviation="tei"
-                nsURI="http://www.tei-c.org/ns/1.0"/>
-              <citationMapping>
-                <citation
-                  label="line"
-                  scope="/tei:TEI/tei:text/tei:body"
-                  xpath="/tei:l[@n = '?']"/>
-              </citationMapping>
-            </online>
-          </edition>
-          <translation
-            urn="urn:cts:greekLit:tlg0013.tlg011.chs02"
-            xml:lang="eng">
-            <label
-              xml:lang="eng">Evelyn-White</label>
-            <online
-              docname="tlg0013/tlg0013.tlg011.chs02.xml">
-              
-              <citationMapping>
-                <citation
-                  label="line"
-                  scope="/tei:TEI/tei:text/tei:body"
-                  xpath="/tei:l[@n = '?']"/>
-              </citationMapping>
-            </online>
+            </exemplar>
           </translation>
-        </work>
-        <work
-          urn="urn:cts:greekLit:tlg0013.tlg012"
-          xml:lang="grc-c">
-          <title
-            xml:lang="eng">Hymn to Hera</title>
-          <translation
-            urn="urn:cts:greekLit:tlg0013.tlg012.chs02"
-            xml:lang="eng">
-            <label
-              xml:lang="eng">Evelyn-White</label>
-            
-            <description xml:lang="eng">English translation by Hugh G. Evelyn-White, originally published in the Loeb
-              series, now in the public domain.</description>
-            
-            
-          </translation>
+          
+          
         </work>
       </textgroup>
-      <textgroup
-        urn="urn:cts:greekLit:tlg0012">
-        <groupname
-          xml:lang="eng">Homeric poetry</groupname>
-        <work
-          urn="urn:cts:greekLit:tlg0012.tlg001"
-          xml:lang="grc">
-          <title
-            xml:lang="eng">Iliad</title>
-          
-          <edition
-            urn="urn:cts:greekLit:tlg0012.tlg001.oct">
-            <label
-              xml:lang="eng">Allen OCT</label>
-            <online
-              docname="tlg0012/oct-iliad.xml">
-              
-              <namespaceMapping
-                abbreviation="tei"
-                nsURI="http://www.tei-c.org/ns/1.0"/>
-              <citationMapping>
-                <citation
-                  label="book"
-                  scope="/tei:TEI/tei:text/tei:body"
-                  xpath="/tei:div[@n = '?']">
-                  <citation
-                    label="line"
-                    scope="/tei:TEI/tei:text/tei:body/tei:div[@n = '?']"
-                    xpath="/tei:l[@n = '?']"/>
-                </citation>
-              </citationMapping>
-            </online>
-          </edition>
-          
-          <edition
-            urn="urn:cts:greekLit:tlg0012.tlg001.octnons">
-            <label
-              xml:lang="eng">Allen OCT</label>
-            <online
-              docname="tlg0012/oct-iliad-nons.xml">
-              
-              <citationMapping>
-                <citation
-                  label="book"
-                  scope="/TEI/text/body"
-                  xpath="/div[@n = '?']">
-                  <citation
-                    label="line"
-                    scope="/TEI/text/body/div[@n = '?']/div"
-                    xpath="/l[@n = '?']"/>
-                </citation>
-              </citationMapping>
-            </online>
-          </edition> 
-        </work>
-      </textgroup>
+      
+      
     </TextInventory>
+    
   
   </cts:reply>
 </GetCapabilities>

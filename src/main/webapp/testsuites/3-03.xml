@@ -1,8 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../rng/Error.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<CTSError  xmlns:cts="http://chs.harvard.edu/xmlns/cts" xmlns="http://chs.harvard.edu/xmlns/cts">
-<message>
-Invalid URN reference: urn:cts:greekLit:NONEXISTENTWORK
-</message>
-<code>3</code>
-</CTSError>
+<?xml-model href="../rng/GetValidReff.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<GetValidReff xmlns:cts="http://chs.harvard.edu/xmlns/cts" xmlns="http://chs.harvard.edu/xmlns/cts">
+    <request>
+        <requestName>GetValidReff</requestName>
+        <requestUrn>urn:cts:tlg0012.tlg001.testAllen:</requestUrn>
+        <level>null</level>
+    </request>
+    <cts:reply>
+        <reff>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.1</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.2</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.3</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.4</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.5</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.6</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.7</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.8</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.9</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.10</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:2.1</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:2.2</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:2.3</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:2.4</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:2.5</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:2.6</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:2.7</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:2.8</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:2.9</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:2.10</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:3.1</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:3.2</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:3.3</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:3.4</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:3.5</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:3.6</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:3.7</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:3.8</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:3.9</urn>
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:3.10</urn>
+            
+        </reff>
+    </cts:reply>
+</GetValidReff>

@@ -47,7 +47,6 @@ import edu.harvard.chs.f1k.GreekNode
 def versionInfo ="version @ctsvVersion@, designed to test CTS specification @specVersion@"
 
 
-
 // Read actual and expected data as Strings, use IBM's
 // Normalizer to normalize UTF-8 characters, then use
 // groovy's DOMBuilder to parse the normalized Strings
@@ -55,55 +54,53 @@ def versionInfo ="version @ctsvVersion@, designed to test CTS specification @spe
 /**
  * @param req URL String of request to test.
  */
-org.custommonkey.xmlunit.Diff  testDiff(String req, String testFile) {
+org.custommonkey.xmlunit.Diff testDiff(String req, String testFile) {
 
-  groovy.xml.Namespace ctsns = new groovy.xml.Namespace("http://chs.harvard.edu/xmlns/cts")
-
-
-  String actual  = new URL(req).getText("UTF-8")
-  actual = Normalizer.normalize(actual, Normalizer.NFC) 
-  groovy.util.Node root1 = new  XmlParser().parseText(actual)
-  groovy.util.Node actualGroovyNode
-  switch (root1.name().getLocalPart()) {
-  case "CTSError":
-  actualGroovyNode = root1[ctsns.code][0]
-  break
-
-  default:
-  actualGroovyNode = root1[ctsns.reply][0]
-  break
-  }
-  GreekNode actualReply = new GreekNode(actualGroovyNode)
+	groovy.xml.Namespace ctsns = new groovy.xml.Namespace("http://chs.harvard.edu/xmlns/cts")
 
 
+	String actual  = new URL(req).getText("UTF-8")
+	actual = Normalizer.normalize(actual, Normalizer.NFC) 
+	groovy.util.Node root1 = new  XmlParser().parseText(actual)
+	groovy.util.Node actualGroovyNode
+	switch (root1.name().getLocalPart()) {
+		case "CTSError":
+			actualGroovyNode = root1[ctsns.code][0]
+			break
 
-  String expected = new File(testFile).getText("UTF-8")
-  expected = Normalizer.normalize(expected, Normalizer.NFC)
-  groovy.util.Node root2 = new  XmlParser().parseText(expected)
-  groovy.util.Node expectedGroovyNode
+		default:
+			actualGroovyNode = root1[ctsns.reply][0]
+			break
+	}
+	GreekNode actualReply = new GreekNode(actualGroovyNode)
 
-  switch (root2.name().getLocalPart()) {
-  case "CTSError":
-  expectedGroovyNode = root2[ctsns.code][0]
-  break
+	String expected = new File(testFile).getText("UTF-8")
+	expected = Normalizer.normalize(expected, Normalizer.NFC)
+	groovy.util.Node root2 = new XmlParser().parseText(expected)
+	groovy.util.Node expectedGroovyNode
 
-  default:
-  expectedGroovyNode = root2[ctsns.reply][0]
-  break
-  }
+	switch (root2.name().getLocalPart()) {
+		case "CTSError":
+			expectedGroovyNode = root2[ctsns.code][0]
+				break
 
-  GreekNode expectedReply = new GreekNode(expectedGroovyNode)
+		default:
+				expectedGroovyNode = root2[ctsns.reply][0]
+					break
+	}
 
-  // Explicitly set of these before XML-based comparison:
-  XMLUnit.setIgnoreWhitespace(true)
-  XMLUnit.setNormalizeWhitespace(true)
-  XMLUnit.setIgnoreComments(true)
+	GreekNode expectedReply = new GreekNode(expectedGroovyNode)
 
-  //  System.err.println "\n\n\nEXPECTED: \n" + expectedReply.toXml() + "\n\n\n"
+		// Explicitly set of these before XML-based comparison:
+		XMLUnit.setIgnoreWhitespace(true)
+		XMLUnit.setNormalizeWhitespace(true)
+		XMLUnit.setIgnoreComments(true)
+
+		//  System.err.println "\n\n\nEXPECTED: \n" + expectedReply.toXml() + "\n\n\n"
 
 
-  def xmlDiff = new Diff(expectedReply.toXml(), actualReply.toXml() )
-  return xmlDiff
+		def xmlDiff = new Diff(expectedReply.toXml(), actualReply.toXml() )
+		return xmlDiff
 }
 
 // Two prerequisites for testing:  
@@ -214,48 +211,47 @@ if (!testFileOK) {
 	    th("Details")
 	  }
 	  testList.each { test ->
-	    String id = test[0]
-	    String urn = test[1]
-	    String params = test[2]
-	    String description = test[3]
+		  String id = test[0]
+		  String urn = test[1]
+		  String params = test[2]
+		  String description = test[3]
 
-	    currentTests++;
-	    totalTests++;
+		  currentTests++;
+		  totalTests++;
 
-	    String req = url + "?request=${requestName}&urn=${urn}&${params}"
-	    String testFileName = "${testsDir}/${id}.xml"
-	    Diff diffResult = testDiff(req,testFileName)
+		  String req = url + "?request=${requestName}&urn=${urn}&${params}"
+		  String testFileName = "${testsDir}/${id}.xml"
+		  Diff diffResult = testDiff(req,testFileName)
 
-	    tr {
-	      td {
-		a(href: "${req}","${id}")
-	      }
-	      td {
-		mkp.yield "${description} (cf. "
-		a(href: "testsuites/${id}.xml", "expected result")
-		mkp.yield ")"
-	      }
+			  tr {
+				  td {
+					  a(href: "${req}","${id}")
+				  }
+				  td {
+					  mkp.yield "${description} (cf. "
+						  a(href: "testsuites/${id}.xml", "expected result")
+						  mkp.yield ")"
+				  }
 
-	      if (diffResult.identical()) {
-		td (class: "ok", "success")
-		td("")
-		currentSuccess++;
-		totalSuccess++;
-		
-	      } else {
-		td(class : "fail", "failed")
-		
-		def details = new DetailedDiff(diffResult)
-		def allDiffs = details.getAllDifferences()
-		td {
-		  ul {
-		    allDiffs.each {
-		      li(it)
-		    }
-		  }
-		}
-	      }
-	    }
+				  if (diffResult.identical()) {
+					  td (class: "ok", "success")
+						  td("")
+						  currentSuccess++;
+					  totalSuccess++;
+				  } else {
+					  td(class : "fail", "failed")
+
+						  def details = new DetailedDiff(diffResult)
+							  def allDiffs = details.getAllDifferences()
+							  td {
+								  ul {
+									  allDiffs.each {
+										  li(it)
+									  }
+								  }
+							  }
+				  }
+			  }
 	  }
 	  
 	  tr {

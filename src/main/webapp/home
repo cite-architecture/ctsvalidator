@@ -23,7 +23,7 @@ html.html {
     h2("Test compliance with CTS @specVersion@")
     p("Validate CTS installed at the following URL:")
     form(action: "validator") {
-      input(name: "url", value: "http://localhost:8888/sparqlcts/api", style: "width:60%")
+      input(name: "url", value: "http://localhost:8080/sparqlcts/api", style: "width:60%")
       input(type: "submit", value: "Run validator")
     }
   }
