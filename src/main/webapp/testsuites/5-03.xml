@@ -15,18 +15,18 @@
 				<tei:text>
 					<tei:body>
 						<tei:div n="1">
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.9">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.9" passage="1.9">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="9">Λητοῦς καὶ Διὸς υἱός· ὃ γὰρ βασιλῆϊ χολωθεὶς</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.10">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.10" passage="1.10">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="10">νοῦσον ἀνὰ στρατὸν ὄρσε κακήν, ὀλέκοντο δὲ λαοί,</l>
 							</cts:node>
 						</tei:div>
 						<tei:div n="2">
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.1">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.1" passage="2.1">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="1">Ἄλλοι μέν ῥα θεοί τε καὶ ἀνέρες ἱπποκορυσταὶ</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.2">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.2" passage="2.2">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="2">εὗδον παννύχιοι, Δία δ᾽ οὐκ ἔχε νήδυμος ὕπνος,</l>
 							</cts:node>
 						</tei:div>

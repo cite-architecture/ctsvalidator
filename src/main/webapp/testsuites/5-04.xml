@@ -15,68 +15,68 @@
 				<tei:text>
 					<tei:body>
 						<tei:div n="1">
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.6">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.6" passage="1.6">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="6">ἐξ οὗ δὴ τὰ πρῶτα διαστήτην ἐρίσαντε</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.7">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.7" passage="1.7">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="7">Ἀτρεΐδης τε ἄναξ ἀνδρῶν καὶ δῖος Ἀχιλλεύς.</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.8">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.8" passage="1.8">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="8">Τίς τάρ σφωε θεῶν ἔριδι ξυνέηκε μάχεσθαι;</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.9">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.9" passage="1.9">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="9">Λητοῦς καὶ Διὸς υἱός· ὃ γὰρ βασιλῆϊ χολωθεὶς</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.10">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.10" passage="1.10">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="10">νοῦσον ἀνὰ στρατὸν ὄρσε κακήν, ὀλέκοντο δὲ λαοί,</l>
 							</cts:node>
 						</tei:div>
 						<tei:div n="2">
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.1">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.1" passage="2.1">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="1">Ἄλλοι μέν ῥα θεοί τε καὶ ἀνέρες ἱπποκορυσταὶ</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.2">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.2" passage="2.2">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="2">εὗδον παννύχιοι, Δία δ᾽ οὐκ ἔχε νήδυμος ὕπνος,</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.3">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.3" passage="2.3">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="3">ἀλλ᾽ ὅ γε μερμήριζε κατὰ φρένα ὡς Ἀχιλῆα</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.4">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.4" passage="2.4">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="4">τιμήσῃ, ὀλέσῃ δὲ πολέας ἐπὶ νηυσὶν Ἀχαιῶν.</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.5">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.5" passage="2.5">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="5">ἧδε δέ οἱ κατὰ θυμὸν ἀρίστη φαίνετο βουλή,</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.6">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.6" passage="2.6">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="6">πέμψαι ἐπ᾽ Ἀτρεΐδῃ Ἀγαμέμνονι οὖλον ὄνειρον·</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.7">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.7" passage="2.7">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="7">καί μιν φωνήσας ἔπεα πτερόεντα προσηύδα·</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.8">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.8" passage="2.8">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="8">βάσκ᾽ ἴθι οὖλε ὄνειρε θοὰς ἐπὶ νῆας Ἀχαιῶν·</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.9">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.9" passage="2.9">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="9">ἐλθὼν ἐς κλισίην Ἀγαμέμνονος Ἀτρεΐδαο</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.10">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:2.10" passage="2.10">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="10">πάντα μάλ᾽ ἀτρεκέως ἀγορευέμεν ὡς ἐπιτέλλω·</l>
 							</cts:node>
 						</tei:div>
 						<tei:div n="3">
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:3.1">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:3.1" passage="3.1">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="1">Αὐτὰρ ἐπεὶ κόσμηθεν ἅμ᾽ ἡγεμόνεσσιν ἕκαστοι,</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:3.2">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:3.2" passage="3.2">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="2">Τρῶες μὲν κλαγγῇ τ᾽ ἐνοπῇ τ᾽ ἴσαν ὄρνιθες ὣς</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:3.3">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:3.3" passage="3.3">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="3">ἠΰτε περ κλαγγὴ γεράνων πέλει οὐρανόθι πρό·</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:3.4">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:3.4" passage="3.4">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="4">αἵ τ᾽ ἐπεὶ οὖν χειμῶνα φύγον καὶ ἀθέσφατον ὄμβρον</l>
 							</cts:node>
-							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:3.5">
+							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:3.5" passage="3.5">
 								<l xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" n="5">κλαγγῇ ταί γε πέτονται ἐπ᾽ ὠκεανοῖο ῥοάων</l>
 							</cts:node>
 						</tei:div>
