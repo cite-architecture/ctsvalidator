@@ -16,17 +16,17 @@
 		<passage xml:lang="grc">
 			<tei:TEI><tei:text><tei:body><tei:div n="1">
 							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts"
-								urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.4"><l
+								urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.4" passage="1.4"><l
 									xmlns="http://www.tei-c.org/ns/1.0"
 									xmlns:tei="http://www.tei-c.org/ns/1.0" n="4">ἡρώων, αὐτοὺς δὲ
 									ἑλώρια τεῦχε κύνεσσιν </l></cts:node>
 							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts"
-								urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.5"><l
+								urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.5" passage="1.5"><l
 									xmlns="http://www.tei-c.org/ns/1.0"
 									xmlns:tei="http://www.tei-c.org/ns/1.0" n="5">οἰωνοῖσί τε πᾶσι,
 									Διὸς δ᾽ ἐτελείετο βουλή, </l></cts:node>
 							<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts"
-								urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.6"><l
+								urn="urn:cts:greekLit:tlg0012.tlg001.testAllen:1.6" passage="1.6"><l
 									xmlns="http://www.tei-c.org/ns/1.0"
 									xmlns:tei="http://www.tei-c.org/ns/1.0" n="6">ἐξ οὗ δὴ τὰ πρῶτα
 									διαστήτην ἐρίσαντε </l></cts:node>

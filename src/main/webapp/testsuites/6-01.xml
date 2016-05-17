@@ -10,13 +10,13 @@
 	<cts:reply>
 		<urn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1.1.2</urn>
 
-		<label> Homeric Epic, Iliad (null): 1.1.2 (urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1.1.2) </label>
+		<label> Homeric Epic, Iliad (Allen. Iliad. Greek. 3 books of 10 lines. Word-tokens wrapped and citable.): 1.1.2 (urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1.1.2) </label>
 
 
 		<passage xml:lang="grc">
 			<tei:TEI><tei:text><tei:body><tei:div n="1"><tei:l n="1">
 								<cts:node xmlns:cts="http://chs.harvard.edu/xmlns/cts"
-									urn="urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1.1.2"><w xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+									urn="urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1.1.2" passage="1.1.2"><w xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
 										n="2">ἄειδε</w></cts:node>
 							</tei:l></tei:div></tei:body></tei:text></tei:TEI>
 		</passage>
