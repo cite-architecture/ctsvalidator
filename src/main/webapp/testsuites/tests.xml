@@ -19,7 +19,7 @@
           <description>Request for service's capabilities: textgroup and work identifiers match.</description>
           <request>GetCapabilities</request>
           <urn/>
-          <otherparams/>
+          <otherparams>inv=inventory-test.xml</otherparams>
      </test>
      
      <!-- GetPrevNextURN --> 
@@ -118,8 +118,6 @@
           <otherparams>level=3</otherparams>
      </test>
      
-    
-     
      <test
           id="3-07">
           <description>Request for valid refs, 3 level text, level 3: reply element matches.</description>
@@ -137,6 +135,100 @@
           
           <otherparams>level=3</otherparams>
      </test>
+     
+     <test
+          id="3-09">
+          <description>Request for valid refs, 2 level text, level 1, crossing container-boundary: reply element matches.</description>
+          <request>GetValidReff</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.9-2.2</urn>
+          
+          <otherparams>level=1</otherparams>
+     </test>
+     
+     <test
+          id="3-10">
+          <description>Request for valid refs, 2 level text, level 2, crossing container-boundary: reply element matches.</description>
+          <request>GetValidReff</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen:1.9-2.2</urn>
+          
+          <otherparams>level=2</otherparams>
+     </test>
+     
+     <!-- Okay, let's get serious about this -->
+     
+     <test
+          id="3-11">
+          <description>Request for valid refs, 3 level text, level 1, crossing boundaries: reply element matches.</description>
+          <request>GetValidReff</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1.9.1-2.2.2</urn>
+          
+          <otherparams>level=1</otherparams>
+     </test>
+     
+     <test
+          id="3-12">
+          <description>Request for valid refs, 3 level text, level 2, crossing boundaries: reply element matches.</description>
+          <request>GetValidReff</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1.9.1-2.2.2</urn>
+          
+          <otherparams>level=2</otherparams>
+     </test>
+     
+     <test
+          id="3-13">
+          <description>Request for valid refs, 3 level text, level 1, crossing boundaries: reply element matches.</description>
+          <request>GetValidReff</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1.9.1-2.2.2</urn>
+          
+          <otherparams>level=3</otherparams>
+     </test>
+     
+     <test
+          id="3-14">
+          <description>Request for valid refs, 3 level text, level 1, requesting with a 2-level URN, crossing boundaries: reply element matches.</description>
+          <request>GetValidReff</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1.9-2.2</urn>
+          
+          <otherparams>level=3</otherparams>
+     </test>
+     
+     <test
+          id="3-15">
+          <description>Request for valid refs, 3 level text, level 2, requesting with a 2-level URN, crossing boundaries: reply element matches.</description>
+          <request>GetValidReff</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1.9-2.2</urn>
+          
+          <otherparams>level=2</otherparams>
+     </test>
+     
+     <test
+          id="3-16">
+          <description>Request for valid refs, 3 level text, level 1, requesting with a 2-level URN, crossing boundaries: reply element matches.</description>
+          <request>GetValidReff</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1.9-2.2</urn>
+          
+          <otherparams>level=1</otherparams>
+     </test>
+     
+     <test
+          id="3-17">
+          <description>Request for valid refs, 3 level text, level 1, requesting with a 1-level URN, crossing boundaries: reply element matches.</description>
+          <request>GetValidReff</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1-2</urn>
+          
+          <otherparams>level=1</otherparams>
+     </test>
+     
+     <test
+          id="3-18">
+          <description>Request for valid refs, 3 level text, level 2, requesting with a 1-level URN, crossing boundaries: reply element matches.</description>
+          <request>GetValidReff</request>
+          <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1-2</urn>
+          
+          <otherparams>level=2</otherparams>
+     </test>
+   
+     <!-- Done with new tests -->
      
      <test
           id="3-error1-01">

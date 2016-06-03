@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../rng/GetValidReff.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<GetValidReff xmlns:cts="http://chs.harvard.edu/xmlns/cts" xmlns="http://chs.harvard.edu/xmlns/cts">
+    <request>
+        <requestName>GetValidReff</requestName>
+        <requestUrn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1-2</requestUrn>
+        <level>1</level>
+    </request>
+    <cts:reply>
+        <reff>
+            
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:1</urn>
+            
+            <urn>urn:cts:greekLit:tlg0012.tlg001.testAllen.wt:2</urn>
+           
+           
+            
+        </reff>
+    </cts:reply>
+</GetValidReff>
